@@ -13,7 +13,6 @@ $last_name = mysqli_real_escape_string($db, $_POST['last_name']);
 $dob = mysqli_real_escape_string($db, $_POST['dob']);
 $telephone = mysqli_real_escape_string($db, $_POST['telephone']);
 $postal_code = mysqli_real_escape_string($db, $_POST['postal_code']);
-$country = mysqli_real_escape_string($db, $_POST['country']);
 $medicare = mysqli_real_escape_string($db, $_POST['medicare']);
 $city = mysqli_real_escape_string($db, $_POST['city']);
 $address = mysqli_real_escape_string($db, $_POST['address']);
