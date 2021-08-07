@@ -86,7 +86,6 @@ include_once 'server.php'
 <input type="submit">
 
 </div>
-</form>
 <script>
     //hide the input by default
      document.getElementById("medicare").style.display= 'none';
@@ -115,6 +114,8 @@ include_once 'server.php'
           }
         }
 </script>
+</form>
+
 
 </body>
 </html>
