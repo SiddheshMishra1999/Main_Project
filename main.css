@@ -15,9 +15,7 @@ body{
     color: lightsalmon;
     font-size: 1.2em;
 }
-nav{
-    
-}
+
 .container{
     display: flex;
 }
@@ -39,6 +37,21 @@ ul{
 
 
 }
+.person{
+    background-color: orange;
+
+
+}
+.vaccine{
+    background-color: orange;
+
+
+}
+.facility{
+    background-color: orange;
+
+
+}
 li{
     float: left;
 }
@@ -49,14 +62,6 @@ li a{
     display: block;
     float: left;
     text-decoration: none;
-    text-align: center;
-}
-section{
-    
-    padding: 5em 2em;
-    
-}
-.hero{
     text-align: center;
 }
 
