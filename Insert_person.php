@@ -31,6 +31,7 @@ $province = mysqli_real_escape_string($db, $_POST['province']);
   if(empty($SSN)) {
   $SSN = NULL;
   }
+  $query_3 = "INSERT INTO Person(passport_num, medicare, SSN) VALUES ('$passport_num', '$medicare', '$SSN')"; 
 
 
 //check db for existing person unique values
