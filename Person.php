@@ -1,4 +1,8 @@
-<?php include('server.php') ?>
+<?php 
+
+include_once 'server.php'
+?>
+
 <html>
 <body>
 
@@ -30,3 +34,4 @@ SSN (if Canadian) <input type="text" name="SSN"><br>
 
 </body>
 </html>
+

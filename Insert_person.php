@@ -26,7 +26,7 @@ $province = mysqli_real_escape_string($db, $_POST['province']);
 
 
 //check db for existing person unique values
-$user_check_query = "SELECT * FROM Person WHERE person_id = $person_id or medicare = $medicare or SSN = $SSN or passport_num = $passport_num LIMIT 1";
+$user_check_query = "SELECT * FROM Person WHERE person_id = $person_id or medicare = $medicare or SSN = $SSN or passport_num = $passport_num LIMIT 1;";
 
 $results = mysqli_query($db, $user_check_query);
 $user = mysqli_fetch_assoc($results);
@@ -41,7 +41,7 @@ if(count($errors) == 0){
 
   $query = "INSERT INTO Person VALUES ($person_id, $SSN, '$passport_num', '$medicare', '$first_name', '$last_name', '$dob','$telephone','$address','$email','$citizenship')";
   mysqli_query($db,$query);
-  $query2 = "INSERT INTO Postal_code VALUES ('$postal_code','$city','$province')";
+  $query2 = "INSERT INTO Postal_code VALUES ('$postal_code','$city','$province');";
   mysqli_query($db,$query2);
 
 }
