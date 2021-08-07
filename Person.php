@@ -60,16 +60,17 @@ include_once 'server.php'
 <label id="email_label" for="email">Email </label>
 <input type="email" name="email" id="email" placeholeder="example@example.com" required><br><br>
 
+<!--
 <label id="citizenship_label"  for="citizenship">Citizenship:</label>
   <select name="citizenship" id="citizenship" onkeypress = "checkIfCanadian()" required>
       <option value="Canadian">Canadian</option>
       <option value="Non-Canadian">Non-Canadian</option>
   </select>
 <br>
-
-<!--<label id="citizenship_label"  for="citizenship" >Citizenship: </label>
-<input id="citizenship" type="text" name="citizenship" onkeydown = "checkIfCanadian()" size="60" placeholder="Canadian, Permanent Resident, visitor or Temporary resident"required><br><br>
 -->
+<label id="citizenship_label"  for="citizenship" >Citizenship: </label>
+<input id="citizenship" type="text" name="citizenship" onkeydown = "checkIfCanadian()" size="60" placeholder="Canadian, Permanent Resident, visitor or Temporary resident"required><br><br>
+
 <label id="passport_num_label" for="passport_num">Passport Number: </label>
 <input type="text" name="passport_num" id="passport_num" pattern="[A-Z]{5}[0-9]{4}" placeholder="abcde1234" ><br><br>
 
