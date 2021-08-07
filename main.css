@@ -1,0 +1,68 @@
+body{
+    background: lightgrey;
+
+}
+.navbar{
+    background: white;
+    padding: 1em;
+
+   
+
+}
+.logo{
+    text-decoration: none;
+    font-weight: bold;
+    color: lightsalmon;
+    font-size: 1.2em;
+}
+
+/* .container{
+    display: flex;
+} */
+
+a{
+    color: #444444;
+    display: block;
+    padding: 8px;
+}
+ul{
+    float: left;
+    list-style-type: none;
+    overflow: hidden;
+
+
+}
+
+.home{
+    background-color: orange;
+
+
+}
+.person{
+    background-color: orange;
+
+
+}
+.vaccine{
+    background-color: orange;
+
+
+}
+.facility{
+    background-color: orange;
+
+
+}
+li{
+    float: left;
+}
+li a{
+    list-style-type: none;
+    margin: 0;
+    padding: 14 px 16px;
+    display: block;
+    float: left;
+    text-decoration: none;
+    text-align: center;
+}
+
