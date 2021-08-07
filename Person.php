@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 include_once 'server.php'
 ?>
@@ -21,12 +21,12 @@ Province: <input type="text" name="province" required><br>
 City: <input type="text" name="city" required>><br>
 Address: <input type="text" name="address"><br>
 E-mail: <input type="text" name="email" required><br>
-Passport Number: <input type="text" name="passport_num"><br>
 Citizenship: <input type="text" name="citizenship" required><br>
+Passport Number(Optional): <input type="text" name="passport_num"><br>
 Medicare (if Canadian) <input type="text" name="medicare"><br>
 SSN (if Canadian) <input type="text" name="SSN"><br>
 
-<input type="submit"> 
+<input type="submit">
 
 </div>
 </form>
@@ -34,4 +34,3 @@ SSN (if Canadian) <input type="text" name="SSN"><br>
 
 </body>
 </html>
-
