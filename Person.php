@@ -60,6 +60,9 @@ include_once 'server.php'
 <label id="email_label" for="email">Email </label>
 <input type="email" name="email" id="email" placeholeder="example@example.com" required><br><br>
 
+<label id="passport_num_label" for="passport_num">Passport Number: </label>
+<input type="text" name="passport_num" id="passport_num" pattern="[A-Z]{5}[0-9]{4}" placeholder="abcde1234" ><br><br>
+
 <!--
 <label id="citizenship_label"  for="citizenship">Citizenship:</label>
   <select name="citizenship" id="citizenship" onkeypress = "checkIfCanadian()" required>
@@ -71,8 +74,7 @@ include_once 'server.php'
 <label id="citizenship_label"  for="citizenship" >Citizenship: </label>
 <input id="citizenship" type="text" name="citizenship" onkeydown = "checkIfCanadian()" size="60" placeholder="Canadian, Permanent Resident, visitor or Temporary resident"required><br><br>
 
-<label id="passport_num_label" for="passport_num">Passport Number: </label>
-<input type="text" name="passport_num" id="passport_num" pattern="[A-Z]{5}[0-9]{4}" placeholder="abcde1234" ><br><br>
+
 
 <label id="medicare_label" for="medicare">Medicare: </label>
 <input type="text" name="medicare" id="medicare" minlength ="12" maxlenght="12" placeholder="abcdef123456" required><br><br>
@@ -91,8 +93,7 @@ include_once 'server.php'
      document.getElementById("SSN").style.display= 'none';
      document.getElementById("medicare_label").style.display= 'none';     
      document.getElementById("SSN_label").style.display= 'none'; 
-     document.getElementById("passport_num_label").style.display= 'none';     
-     document.getElementById("passport_num").style.display= 'none'; 
+
 
      //show if canadian
      function checkIfCanadian(){
@@ -103,20 +104,14 @@ include_once 'server.php'
              document.getElementById("medicare").style.display= 'block';
              document.getElementById("SSN").style.display= 'block';   
              document.getElementById("SSN_label").style.display= 'block';              
-             document.getElementById("passport_num").style.display = 'none';  
-             document.getElementById("passport_num_label").style.display = 'none';            
-            }
-          else if ((inputtedCitizenship.toUpperCase() == "Visitor") || (inputtedCitizenship.toUpperCase() == "Temporary resident")){
-              document.getElementById("passport_num").style.display = 'block';  
-              document.getElementById("passport_num_label").style.display = 'block';  
           }
+
           else{
             document.getElementById("medicare").style.display= 'none';
             document.getElementById("SSN").style.display= 'none';
             document.getElementById("medicare_label").style.display= 'none';     
             document.getElementById("SSN_label").style.display= 'none'; 
-            document.getElementById("passport_num_label").style.display= 'none';     
-            document.getElementById("passport_num").style.display= 'none'; 
+
           }
         }
 </script>
