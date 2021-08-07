@@ -18,7 +18,7 @@ Date of Birth: <input type="date" name="dob" required><br>
 Telephone Number: <input type="text" name="telephone" required><br>
 Postal Code: <input type="text" name="postal_code" required><br>
 Province: <input type="text" name="province" required><br>
-City: <input type="text" name="city" required>><br>
+City: <input type="text" name="city" required><br>
 Address: <input type="text" name="address"><br>
 E-mail: <input type="text" name="email" required><br>
 Citizenship: <input type="text" name="citizenship" required><br>
