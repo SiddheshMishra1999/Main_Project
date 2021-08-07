@@ -22,48 +22,6 @@ $SSN = mysqli_real_escape_string($db, $_POST['SSN']);
 $province = mysqli_real_escape_string($db, $_POST['province']);
 
 //check for missing values
-if(empty($person_id)) {
-  array_push($errors, "Person ID is required.");
-  echo "Person ID is required.<br />";
-  }
-
-  if(empty($postal_code)) {
-  array_push($errors, "Postal code is required.");
-  echo "Postal code is required.<br />";
-  }
-
-  if(empty($first_name)) {
-  array_push($errors, "First name is required.");
-  echo "First name is required.<br />";
-  }
-
-  if(empty($last_name)) {
-  array_push($errors, "Last name is required.");
-  echo "Last name is required.<br />";
-  }
-
-  if(empty($dob)) {
-  array_push($errors, "Date of birth is required.");
-  echo "Date of birth is required.<br />";
-  }
-
-  if(empty($province)) {
-  array_push($errors, "Province is required.");
-  echo "Province is required.<br />";
-  }
-  if(empty($city)) {
-  array_push($errors, "City is required.");
-  echo "City is required.<br />";
-  }
-  if(empty($address)) {
-  array_push($errors, "Address is required.");
-  echo "Address is required.<br />";
-  }
-  if(empty($email)) {
-  array_push($errors, "Email is required.");
-  echo "Email is required.<br />";
-  }
-
   if(empty($passport_num)) {
   $passport_num = NULL;
   }
@@ -83,9 +41,9 @@ $user = mysqli_fetch_assoc($results);
 if($user){
 
   if($user['person_id'] === $person_id){array_push($errors, "Person ID already exist");}
-  if($user['SSN'] === $SSN){array_push($errors, "SSN already exist");}
-  if($user['medicare'] === $medicare){array_push($errors, "Medicare already exist");}
-  if($user['passport_num'] === $passport_num){array_push($errors, "Passport already exist");}
+//  if($user['SSN'] === $SSN){array_push($errors, "SSN already exist");}
+//  if($user['medicare'] === $medicare){array_push($errors, "Medicare already exist");}
+//  if($user['passport_num'] === $passport_num){array_push($errors, "Passport already exist");}
 
 }
 
