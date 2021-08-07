@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<form action="Person.php" method="post">
+<form action="Insert_person.php" method="post">
   <div class="container">
     <h1>Add person</h1>
     <p>Please fill in this form to add a new person to the database.</p>
