@@ -22,17 +22,7 @@ $SSN = mysqli_real_escape_string($db, $_POST['SSN']);
 $province = mysqli_real_escape_string($db, $_POST['province']);
 
 //check for missing values
-  if(empty($passport_num)) {
-  $passport_num = NULL;
-  }
-  if(empty($medicare)) {
-  $medicare = NULL;
-  }
-  if(empty($SSN)) {
-  $SSN = NULL;
-  }
-  $query_3 = "INSERT INTO Person(passport_num, medicare, SSN) VALUES ('$passport_num', '$medicare', '$SSN')"; 
-
+  
 
 //check db for existing person unique values
 $user_check_query = "SELECT * FROM Person WHERE person_id = '$person_id' or medicare = '$medicare' or SSN = '$SSN' or passport_num = '$passport_num' LIMIT 1";
@@ -49,6 +39,18 @@ if($user){
 }
 
 if(count($errors) == 0){
+
+  if(empty($passport_num)) {
+    $passport_num = NULL;
+    }
+    if(empty($medicare)) {
+    $medicare = NULL;
+    }
+    if(empty($SSN)) {
+    $SSN = NULL;
+    }
+    $query_3 = "INSERT INTO Person(passport_num, medicare, SSN) VALUES ('$passport_num', '$medicare', '$SSN')"; 
+  
 
   $query = "INSERT INTO Person VALUES ('$person_id', '$SSN', '$passport_num', '$medicare', '$first_name', '$last_name', '$dob','$telephone','$address','$email','$citizenship','$postal_code')";
   mysqli_query($db,$query);
