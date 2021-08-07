@@ -15,10 +15,10 @@ include_once 'server.php'
 
             <nav>
                 <ul class="main-nav"> 
-                    <li class="home"><a href="#">Home</a></li>
+                    <li><a href="Index.php">Home</a></li>
                     <li class="person"><a href="Person.php">New Person</a></li>
-                    <li class="vaccine"><a href="Vaccine.php">Vaccines</a></li>
-                    <li class ="facility"><a href="Facility.php">Facilities</a></li>
+                    <li><a href="Vaccine.php">Vaccines</a></li>
+                    <li><a href="Facility.php">Facilities</a></li>
                 </ul>
                 
             </nav>

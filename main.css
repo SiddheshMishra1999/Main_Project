@@ -1,6 +1,6 @@
 body{
     background: lightgrey;
-    margin: 0;
+
 }
 .navbar{
     background: white;
@@ -16,9 +16,10 @@ body{
     font-size: 1.2em;
 }
 
-.container{
+/* .container{
     display: flex;
-}
+} */
+
 a{
     color: #444444;
     display: block;
