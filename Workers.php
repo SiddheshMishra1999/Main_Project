@@ -46,5 +46,24 @@ echo "<table id = 'employee_table' class = 'employee_table' table border = '1'>
 <th> end date </th>
 ";
 
+while($row = mysqli_fetch_array($results)) {
+
+    echo "<tr>
+    <td> " . $row['first_name'] . "</td>
+    <td> " . $row['last_name'] . "</td>
+    <td> " . $row['employee_id'] . "</td>
+    <td> " . $row['person_id'] ."</td>
+    <td> " .$row['facility_id'] ."</td>
+    <td> " .$row['start_date'] ."</td>
+    <td> " .$row['end_date'] . "</td>
+    </tr>"; 
+}
+
+echo "</table>";
+
+mysqli_close($db);
+
+
+
 ?>
 
