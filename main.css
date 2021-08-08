@@ -73,9 +73,13 @@ li a{
     text-decoration: none;
     text-align: center;
 }
+table{
+    color: rgb(0, 0, 0);
+}
 
 th{
-    background-color: 3399FF; 
+    background-color: blue; 
+    color: white;
 }
 tr :nth-child(odd) { 
     
@@ -86,8 +90,7 @@ tr :nth-child(even) {
     
     background-color:00CCFF;
 }
-table{
-    color: rgb(0, 0, 0);
-}
+
+
 
 
