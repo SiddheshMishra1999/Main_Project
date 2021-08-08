@@ -29,11 +29,14 @@
 
 include_once 'server.php';
 
-$query = "SELECT first_name, last_name, Worker.employee_id, Worker.person_id, facility_id, start_date, end_date
-FROM Worker, Works_at, Person
-WHERE (Worker.manages_facility_id IS NULL) AND (Person.person_id = Worker.person_id) AND (Worker.facility_id = Facility.facility_id)";
+$query_1 = "SELECT first_name, last_name, Worker.employee_id, Worker.person_id, Works_at.facility_id, start_date, end_date
+FROM Worker, Works_at, Person, Facility
+WHERE (Worker.manages_facility_id IS NULL) 
+AND (Person.person_id = Worker.person_id) 
+AND (Works_at.facility_id = Facility.facility_id)
+AND (Worker.employee_id = Works_at.employee_id)";
 
-$results = mysqli_query($db, $query);
+$results = mysqli_query($db, $query_1);
 
 echo "<table id = 'employee_table' class = 'employee_table' table border = '1'>
 
