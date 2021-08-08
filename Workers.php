@@ -46,3 +46,5 @@ echo "<table id = 'employee_table' class = 'employee_table' table border = '1'>
 <th> end date </th>
 ";
 
+?>
+
