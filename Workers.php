@@ -37,13 +37,13 @@ $results = mysqli_query($db, $query);
 
 echo "<table id = 'employee_table' class = 'employee_table' table border = '1'>
 
-<th> first name </th>
-<th> last name </th>
-<th> employee id </th>
-<th> person id </th> 
-<th> facility id </th>
-<th> start date </th>
-<th> end date </th>
+<th> First Name </th>
+<th> Last Name </th>
+<th> Employee ID </th>
+<th> Person ID </th> 
+<th> Facility ID </th>
+<th> Start Date </th>
+<th> End Date </th>
 ";
 
 while($row = mysqli_fetch_array($results)) {
