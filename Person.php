@@ -81,7 +81,7 @@ include_once 'server.php'
   <input type="text" name="medicare" id="medicare" minlength ="12" maxlenght="12" placeholder="abcdef123456"><br><br>
 
   <label id="SSN_label" for="SSN">Social Security Number: </label>
-  <input type="text" name="SSN" id="SSN" minlength ="11" maxlenght="11" pattern="[0-9]{3}[0-9]{3}[0-9]{3}"placeholder="123456789"><br><br>
+  <input type="text" name="SSN" id="SSN" minlength ="9" maxlenght="9" pattern="[0-9]{3}[0-9]{3}[0-9]{3}"placeholder="123456789"><br><br>
 
 
 

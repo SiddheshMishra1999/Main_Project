@@ -78,8 +78,7 @@ table{
 }
 
 th{
-    background-color: blue; 
-    color: white;
+
 }
 tr :nth-child(odd) { 
     
