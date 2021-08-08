@@ -68,11 +68,19 @@ li a{
     text-decoration: none;
     text-align: center;
 }
+
+th{
+    background-color: 3399FF; 
+}
 tr :nth-child(odd) { 
     
-    background-color:#C0C0C0;
+    background-color:lightblue;
 }
 
+tr :nth-child(even) { 
+    
+    background-color:00CCFF;
+}
 table{
     color: rgb(0, 0, 0);
 }
