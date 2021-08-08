@@ -31,7 +31,7 @@ $query = "SELECT * FROM Person";
 $results = mysqli_query($db, $query);
 // $user = mysqli_fetch_assoc($results);
 
-echo ("<table id='person_table' class='person_table' table border='1'>
+echo "<table id='person_table' class='person_table' table border='1'>
 
 <th>Person ID </th>
 <th>SSN </th>
@@ -46,7 +46,7 @@ echo ("<table id='person_table' class='person_table' table border='1'>
 <th>Citizenship </th>
 <th>Postal Code </th>
 
-");
+";
 
 while($row = mysqli_fetch_array($results)){   //Creates a loop to loop through results
     echo "<tr>

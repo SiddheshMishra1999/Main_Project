@@ -1,5 +1,8 @@
 body{
-    background: lightgrey;
+    background-image: url("https://images-ext-2.discordapp.net/external/-kLC8u4yqzFo6sOqswenpjWpF_KwyWQsrbi2LCdNtzk/https/www.vmcdn.ca/f/files/sootoday/images/health/covid-19-coronavirus/vaccination-adobestock_128513269-%281%29.jpeg;w=960");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #cccccc;
 
 }
 .navbar{
@@ -16,9 +19,9 @@ body{
     font-size: 1.2em;
 }
 
-/* .container{
+ .container{
     display: flex;
-} */
+} 
 
 a{
     color: #444444;
@@ -65,9 +68,9 @@ li a{
     text-decoration: none;
     text-align: center;
 }
-tr{ 
-    nth-child(even);
-    background-color: #696969;
+tr :nth-child(odd) { 
+    
+    background-color:#C0C0C0;
 }
 
 table{
