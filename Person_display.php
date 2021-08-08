@@ -13,6 +13,7 @@
                     <li class="person"><a href="Person.php">New Person</a></li>
                     <li><a href="Vaccine.php">Vaccines</a></li>
                     <li><a href="Facility.php">Facilities</a></li>
+                    <li><a href ="Workers.php">Workers</a></li>
                 </ul>
                 
             </nav>
