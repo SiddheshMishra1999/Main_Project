@@ -31,7 +31,7 @@ include_once 'server.php';
 
 $query = "SELECT first_name, last_name, Worker.employee_id, Worker.person_id, facility_id, start_date, end_date
 FROM Worker, Works_at, Person
-WHERE (Worker.manages_facility_id IS NULL) AND (Person.person_id = Worker.person_id)";
+WHERE (Worker.manages_facility_id IS NULL) AND (Person.person_id = Worker.person_id) AND (Worker.facility_id = Facility.facility_id)";
 
 $results = mysqli_query($db, $query);
 
