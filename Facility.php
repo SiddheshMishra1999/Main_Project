@@ -10,7 +10,7 @@
             <nav>
                 <ul class="main-nav"> 
                     <li><a href="Index.php">Home</a></li>
-                    <li ><a href="Person_display.php">New Person</a></li>
+                    <li ><a href="Person_display.php">Person</a></li>
                     <li><a href="Vaccine.php">Vaccines</a></li>
                     <li class="facility"><a href="Facility.php">Facilities</a></li>
                     <li><a href ="Workers.php">Workers</a></li>
