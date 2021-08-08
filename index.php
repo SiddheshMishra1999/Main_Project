@@ -17,7 +17,7 @@
             <nav>
                 <ul class="main-nav"> 
                     <li class="home"><a href="#">Home</a></li>
-                    <li><a href="Person.php">New Person</a></li>
+                    <li><a href="Person_display.php">New Person</a></li>
                     <li><a href="Vaccine.php">Vaccines</a></li>
                     <li><a href="Facility.php">Facilities</a></li>
                 </ul>
