@@ -61,26 +61,27 @@ include_once 'server.php'
   <input type="email" name="email" id="email" placeholeder="example@example.com" required><br><br>
 
   <label id="passport_num_label" for="passport_num">Passport Number: </label>
-  <input type="text" name="passport_num" id="passport_num" pattern="[A-Z]{5}[0-9]{4}" placeholder="abcde1234" ><br><br>
+  <input type="text" name="passport_num" id="passport_num"placeholder="abcde1234" ><br><br>
 
-  <!--
+  <!---->
   <label id="citizenship_label"  for="citizenship">Citizenship:</label>
-    <select name="citizenship" id="citizenship" onkeypress = "checkIfCanadian()" required>
+    <select name="citizenship" id="citizenship" onchange = "checkIfCanadian()" required>
+        <option value=" " >Choose here</option>
         <option value="Canadian">Canadian</option>
         <option value="Non-Canadian">Non-Canadian</option>
     </select>
   <br>
-  -->
-  <label id="citizenship_label"  for="citizenship" >Citizenship: </label>
+  
+  <!-- <label id="citizenship_label"  for="citizenship" >Citizenship: </label>
   <input id="citizenship" type="text" name="citizenship" onkeydown = "checkIfCanadian()" size="60" placeholder="Canadian, Permanent Resident, visitor or Temporary resident"required><br><br>
-
+-->
 
 
   <label id="medicare_label" for="medicare">Medicare: </label>
-  <input type="text" name="medicare" id="medicare" minlength ="12" maxlenght="12" placeholder="abcdef123456" required><br><br>
+  <input type="text" name="medicare" id="medicare" minlength ="12" maxlenght="12" placeholder="abcdef123456"><br><br>
 
   <label id="SSN_label" for="SSN">Social Security Number: </label>
-  <input type="text" name="SSN" id="SSN" minlength ="11" maxlenght="11" pattern="[0-9]{3} [0-9]{3} [0-9]{3}"placeholder="123 456 789" required><br><br>
+  <input type="text" name="SSN" id="SSN" minlength ="11" maxlenght="11" pattern="[0-9]{3} [0-9]{3} [0-9]{3}"placeholder="123 456 789"><br><br>
 
 
 
@@ -100,6 +101,9 @@ include_once 'server.php'
           if((inputtedCitizenship.toUpperCase() == "CANADIAN") || (inputtedCitizenship.toUpperCase() == "Permanent Resident")){
               document.getElementById("medicare_label").style.display= 'block';     
               document.getElementById("medicare").style.display= 'block';
+              document.getElementById("SSN").required = true;
+              document.getElementById("medicare").required = true;
+
               document.getElementById("SSN").style.display= 'block';   
               document.getElementById("SSN_label").style.display= 'block';              
             }
@@ -113,8 +117,7 @@ include_once 'server.php'
             }
           }
   </script>
-
-  <input type="submit">
+  <input type="Submit">
 
 </form>
 
