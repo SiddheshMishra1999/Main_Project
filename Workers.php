@@ -10,7 +10,7 @@
             <nav>
                 <ul class="main-nav"> 
                     <li><a href="Index.php">Home</a></li>
-                    <li ><a href="Person.php">New Person</a></li>
+                    <li ><a href="Person_display.php">Person</a></li>
                     <li><a href="Vaccine.php">Vaccines</a></li>
                     <li><a href="Facility.php">Facilities</a></li>
                     <li class="workers"><a href ="Workers.php">Workers</a></li>
@@ -45,6 +45,4 @@ echo "<table id = 'employee_table' class = 'employee_table' table border = '1'>
 <th> start date </th>
 <th> end date </th>
 ";
-
-?>
 
