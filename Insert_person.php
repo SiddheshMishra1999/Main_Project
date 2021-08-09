@@ -60,7 +60,7 @@ if(count($errors) == 0){
 
 
 }
-else if(count($errors)>0){
+else{
     header("Location: Failed.php");
 }
 //end registering Person
