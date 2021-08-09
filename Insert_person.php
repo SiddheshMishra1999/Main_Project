@@ -17,6 +17,11 @@ $address = mysqli_real_escape_string($db, $_POST['address']);
 $email = mysqli_real_escape_string($db, $_POST['email']);
 $passport_num = mysqli_real_escape_string($db, $_POST['passport_num']);
 $citizenship = mysqli_real_escape_string($db, $_POST['citizenship']);
+$infected = mysqli_real_escape_string($db, $_POST['infection_num']);
+$infected_date = mysqli_real_escape_string($db, $_POST['infection_date']);
+$variant_type = mysqli_real_escape_string($db, $_POST['variant']);
+
+
 //$SSN = $_POST['SSN'];
 $SSN = mysqli_real_escape_string($db, $_POST['SSN']);
 $province = mysqli_real_escape_string($db, $_POST['province']);
@@ -51,6 +56,8 @@ if($user){
     mysqli_query($db,$query);
     $query2 = "INSERT INTO Postal_code VALUES ('$postal_code','$city','$province')";
     mysqli_query($db,$query2);
+    $query3 = "INSERT INTO Infected VALUES ('$infected','$person_id', '$infected_date', '$variant_type')";
+    mysqli_query($db,$query3);
     // redirect to submitted page
     header("Location: Sumbit.php");
 
