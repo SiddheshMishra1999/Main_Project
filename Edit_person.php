@@ -81,8 +81,16 @@ if($user){
 //  if($user['passport_num'] === $passport_num){array_push($errors, "Passport already exist");}
 }
 */
- $query = "UPDATE Person SET first_name = '$first_name' WHERE person_id = '$person_id'";
-  mysqli_query($db,$query);
+$query = "UPDATE Person SET first_name = '$first_name' WHERE person_id = '$person_id'";
+mysqli_query($db,$query);
+$query = "UPDATE Person SET last_name = '$last_name' WHERE person_id = '$person_id'";
+mysqli_query($db,$query);
+$query = "UPDATE Person SET medicare = '$medicare' WHERE person_id = '$person_id'";
+mysqli_query($db,$query);
+$query = "UPDATE Person SET dob = '$dob' WHERE person_id = '$person_id'";
+mysqli_query($db,$query);
+$query = "UPDATE Person SET telephone = '$telephone' WHERE person_id = '$person_id'";
+mysqli_query($db,$query);
 
   //$query2 = "UPDATE Postal_code SET postal_code = '$postal_code', city = '$city', province = '$province'";
   //mysqli_query($db,$query2);
