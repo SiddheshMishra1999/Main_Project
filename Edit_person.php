@@ -41,6 +41,9 @@ if(empty($telephone)) {
 if(empty($postal_code)) {
   $postal_code = "SELECT postal_code FROM Person WHERE person_id = $person_id";
 }
+
+
+
 if(empty($city)) {
   $city = "SELECT city FROM Person WHERE person_id = $person_id";
 }
@@ -84,6 +87,28 @@ if($user){
  $query = "UPDATE Person SET first_name = '$first_name' WHERE person_id = '$person_id'";
   mysqli_query($db,$query);
 
+  $query7 = "UPDATE Person SET city = '$city' WHERE person_id = '$person_id'";
+  mysqli_query($db,$query7);
+
+  $query8 = "UPDATE Person SET adress= '$address' WHERE person_id = '$person_id'";
+  mysqli_query($db,$query8);
+
+  $query9 = "UPDATE Person SET email= '$email' WHERE person_id = '$person_id'";
+  mysqli_query($db,$query9);
+
+  $query10 = "UPDATE Person SET passport_num= '$passport_num' WHERE person_id = '$person_id'";
+  mysqli_query($db,$query10);
+
+  $query11 = "UPDATE Person SET citizenship= '$citizenship' WHERE person_id = '$person_id'";
+  mysqli_query($db,$query11);
+
+  $query12 = "UPDATE Person SET SSN= '$SSN' WHERE person_id = '$person_id'";
+  mysqli_query($db,$query12);
+
+  $query12 = "UPDATE Person SET province= '$province' WHERE person_id = '$person_id'";
+  mysqli_query($db,$query12);
+
+  
   //$query2 = "UPDATE Postal_code SET postal_code = '$postal_code', city = '$city', province = '$province'";
   //mysqli_query($db,$query2);
   // redirect to submitted page
