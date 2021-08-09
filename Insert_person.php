@@ -39,13 +39,13 @@ $user_check_query = "SELECT * FROM Person WHERE person_id = '$person_id' or medi
 
 $results = mysqli_query($db, $user_check_query);
 $user = mysqli_fetch_assoc($results);
+
 if($user){
 
   if($user['person_id'] === $person_id){array_push($errors, "Person ID already exist");}
 //  if($user['SSN'] === $SSN){array_push($errors, "SSN already exist");}
 //  if($user['medicare'] === $medicare){array_push($errors, "Medicare already exist");}
 //  if($user['passport_num'] === $passport_num){array_push($errors, "Passport already exist");}
-
 }
 
 if(count($errors) == 0){
@@ -58,6 +58,9 @@ if(count($errors) == 0){
   header("Location: Sumbit.php");
 
 
+}
+else if(count($errors)>0){
+    header("Location: Failed.php");
 }
 //end registering Person
 
