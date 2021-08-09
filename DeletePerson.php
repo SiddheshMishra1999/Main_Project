@@ -24,7 +24,7 @@ include_once 'server.php'
   </div>
 
 <form action="Delete_person.php" method="post">
-  <div class="container">
+  <div class="form">
     <h1>Delete Person</h1>
     <p>Please enter the Person ID that you wish to delete from the database</p>
     <hr>
