@@ -1,6 +1,6 @@
 <?php
 
-include_once 'server.php'
+include_once 'server.php';
 ?>
 
 <html>
@@ -10,13 +10,13 @@ include_once 'server.php'
 <body>
 
 <div class="navbar">
-        <div class="delete">
+        <div class="container">
             <a class="logo" href="Index.php">Comp 353 </a>
 
             <nav>
                 <ul class="main-nav">
                     <li><a href="Person_display.php">Person</a></li>
-                    <li class="Delete_person"><a href="Facility.php"> > Delete a Person</a></li>
+                    <li class="Delete_person"><a href="#"> > Delete a Person</a></li>
                 </ul>
 
             </nav>

@@ -1,6 +1,8 @@
 <?php 
 
-include_once 'server.php'
+include_once 'server.php';
+
+    header( "refresh:5 ;url=Person_display.php" );
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +15,7 @@ include_once 'server.php'
     <title>Document</title>
 </head>
 <body>
-<div class="navbar">
+    <div class="navbar">
         <div class="container">
             <a class="logo" href="#">Comp 353 </a>
 
@@ -28,6 +30,40 @@ include_once 'server.php'
             </nav>
         </div>
     </div>
-    <h1> Thank you! Form Submitted!  </h1> 
+
+    <div class="timer">
+          <h1> </h1> 
+    </div>
+    <script>
+         var h1 = document.getElementsByTagName("h1");
+            h1[0].innerHTML = " Thank you for Submitting! Redirecting to Person page in:";
+
+            var sec         = 5,
+            countDiv    = document.getElementById("timer"),
+            secpass,
+            countDown   = setInterval(function () {
+                'use strict';
+                
+                secpass();
+            }, 1000);
+
+            function secpass() {
+            'use strict';
+            
+            if (sec > 0) {
+                
+                sec = sec - 1;
+                
+            } else {
+                
+                clearInterval(countDown);
+                
+                countDiv.innerHTML = 'countdown done';
+                
+            }
+        }
+
+    </script>
 </body>
+
 </html>

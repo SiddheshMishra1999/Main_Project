@@ -101,8 +101,8 @@ include_once 'server.php'
                   document.getElementById("medicare").style.display= 'block';
                   document.getElementById("SSN").style.display= 'block';   
                   document.getElementById("SSN_label").style.display= 'block'; 
-                  document.getElementById("SSN").required = TRUE;
-                  document.getElementById("medicare").required = TRUE;
+                  document.getElementById("SSN").required = true;
+                  document.getElementById("medicare").required = true;
 
              
                 }
@@ -112,7 +112,7 @@ include_once 'server.php'
                   document.getElementById("SSN").style.display= 'none';   
                   document.getElementById("SSN_label").style.display= 'none'; 
                   document.getElementById("SSN").required = FALSE;
-                  document.getElementById("medicare").required = FALSE;
+                  document.getElementById("medicare").required = false;
 
 
                 }
