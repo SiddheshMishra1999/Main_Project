@@ -36,7 +36,7 @@ echo "<table id='person_table' class='person_table' table border='1'>
 
 <th>Person ID </th>
 <th>SSN </th>
-<th>Passport Number ID </th>
+<th>Passport Number</th>
 <th>Medicare </th>
 <th>First Name </th>
 <th>Last Name </th>
