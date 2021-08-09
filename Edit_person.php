@@ -81,7 +81,7 @@ if($user){
 //  if($user['passport_num'] === $passport_num){array_push($errors, "Passport already exist");}
 }
 */
-//if(count($errors) == 0){
+if(count($errors) == 0){
 
   $query = "INSERT INTO Person VALUES ('$person_id', '$SSN', '$passport_num', '$medicare', '$first_name', '$last_name', '$dob','$telephone','$address','$email','$citizenship','$postal_code')";
   mysqli_query($db,$query);
@@ -91,10 +91,10 @@ if($user){
   header("Location: Sumbit.php");
 
 
-//}
-//else{
-  //  header("Location: Failed.php");
-//}
+}
+else{
+    header("Location: Failed.php");
+}
 //end registering Person
 
 ?>
