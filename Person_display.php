@@ -15,6 +15,13 @@
                     <li><a href="Facility.php">Facilities</a></li>
                     <li><a href ="Workers.php">Workers</a></li>
                 </ul>
+
+                <ul class="side-nav">
+                    <li><a href="Person.php">Add a New Person </li>
+                    <li><a href="DeletePerson.php">Delete a Person </li>
+
+
+                </ul>
                 
             </nav>
         </div>
