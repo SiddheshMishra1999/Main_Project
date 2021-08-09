@@ -57,7 +57,7 @@ include_once 'server.php'
       <input type="email" name="email" id="email" placeholeder="example@example.com" required><br><br>
 
       <label id="passport_num_label" for="passport_num">Passport Number: </label>
-      <input type="text" name="passport_num" id="passport_num" minlength ="9" maxlenght="9" placeholder="abcde1234" ><br><br>
+      <input type="text" name="passport_num" id="passport_num" minlength ="9" maxlength="9" placeholder="abcde1234" ><br><br>
 
       <!---->
       <label id="citizenship_label"  for="citizenship">Citizenship:</label>
@@ -77,10 +77,10 @@ include_once 'server.php'
 
 
       <label id="medicare_label" for="medicare">Medicare: </label>
-      <input type="text" name="medicare" id="medicare" minlength ="12" maxlenght="12" placeholder="abcdef123456"><br><br>
+      <input type="text" name="medicare" id="medicare" minlength ="12" maxlength="12" placeholder="abcdef123456"><br><br>
 
       <label id="SSN_label" for="SSN">Social Security Number: </label>
-      <input type="text" name="SSN" id="SSN" minlength ="9" maxlenght="9" pattern="[0-9]{3}[0-9]{3}[0-9]{3}"placeholder="123456789"><br><br>
+      <input type="text" name="SSN" id="SSN" minlength ="9" maxlength="9" pattern="[0-9]{3}[0-9]{3}[0-9]{3}"placeholder="123456789"><br><br>
 
 
 
