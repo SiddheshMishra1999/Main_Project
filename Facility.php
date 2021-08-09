@@ -31,6 +31,7 @@ $query_1 = "SELECT * FROM Facility";
 
 $results = mysqli_query($db, $query_1);
 
+echo "<table id = 'facility_table' class = 'facility_table' table border = '1'>
 
 <th> Facility ID </th>
 <th> Facility Type </th>
