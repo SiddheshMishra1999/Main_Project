@@ -27,17 +27,31 @@
 
 include_once 'server.php';
 
+$query_1 = "SELECT * FROM Facility";
 
 $results = mysqli_query($db, $query_1);
 
 echo "<table id = 'employee_table' class = 'employee_table' table border = '1'>
 
 <th> Facility ID </th>
+<th> Facility Type </th>
+<th> Faciliy Name </th>
+<th>  Address </th> 
+<th> Webadress </th>
+<th> Telephone </th>
+<th> Postal Code </th>
 ";
 
 while($row = mysqli_fetch_array($results)) {
 
     echo "<tr>
+    <td> " . $row['facility_id'] . "</td>
+    <td> " . $row['type_name'] . "</td>
+    <td> " . $row['name'] . "</td>
+    <td> " . $row['address'] ."</td>
+    <td> " .$row['webaddress'] ."</td>
+    <td> " .$row['telephone'] ."</td>
+    <td> " .$row['postal_code'] . "</td>
     </tr>"; 
 }
 
