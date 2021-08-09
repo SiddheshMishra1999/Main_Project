@@ -125,6 +125,7 @@ mysqli_query($db,$query);
   mysqli_query($db,$query);
 
   */
+
   // redirect to submitted page
   header("Location: Sumbit.php");
 
