@@ -67,6 +67,9 @@ ul{
 
 
 }
+.Delete_person{
+    background-color: orange;
+}
 li{
     float: left;
 }

@@ -27,7 +27,7 @@ include_once 'server.php'
         <p>Please fill in this form to add a new person to the database.</p>
         <hr>
       <label id="person_id_label" for="person_id">Person ID: </label>
-      <input type="number" name="person_id" id="person_id"required><br><br>
+      <input type="number" name="person_id" id="person_id" required><br><br>
 
       <label id="first_name_label" for="first_name">First Name: </label>
       <input type="text" name="first_name" id="first_name" required><br><br>

@@ -16,7 +16,7 @@ include_once 'server.php'
             <nav>
                 <ul class="main-nav">
                     <li><a href="Person_display.php">Person</a></li>
-                    <li><a href="Facility.php"> > Delete a Person</a></li>
+                    <li class="Delete_person"><a href="Facility.php"> > Delete a Person</a></li>
                 </ul>
 
             </nav>
