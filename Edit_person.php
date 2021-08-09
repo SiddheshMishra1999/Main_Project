@@ -116,7 +116,7 @@ mysqli_query($db,$query);
   $query12 = "UPDATE Person SET province= '$province' WHERE person_id = '$person_id'";
   mysqli_query($db,$query12);
 
-  
+
   //$query2 = "UPDATE Postal_code SET postal_code = '$postal_code', city = '$city', province = '$province'";
   //mysqli_query($db,$query2);
   // redirect to submitted page
