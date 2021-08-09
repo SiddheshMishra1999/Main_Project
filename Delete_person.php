@@ -21,7 +21,7 @@ if($user){
 
 if(count($errors) == 0){
 
-  $query = "UPDATE Person SET isActive = 0 WHERE person_id = '$person_id';";
+  $query = "UPDATE Person SET isActive = 'FALSE' WHERE person_id = '$person_id'";
   mysqli_query($db,$query);
   header("Location: Sumbit.php");
 }
