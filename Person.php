@@ -57,7 +57,7 @@ include_once 'server.php'
       <input type="email" name="email" id="email" placeholeder="example@example.com" required><br><br>
 
       <label id="passport_num_label" for="passport_num">Passport Number: </label>
-      <input type="text" name="passport_num" id="passport_num"placeholder="abcde1234" ><br><br>
+      <input type="text" name="passport_num" id="passport_num" minlength ="9" maxlenght="9" placeholder="abcde1234" ><br><br>
 
       <!---->
       <label id="citizenship_label"  for="citizenship">Citizenship:</label>
