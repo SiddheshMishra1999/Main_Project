@@ -10,8 +10,8 @@ include_once 'server.php'
 <body>
 
 <div class="navbar">
-        <div class="container">
-            <a class="logo" href="#">Comp 353 </a>
+        <div class="delete">
+            <a class="logo" href="Index.php">Comp 353 </a>
 
             <nav>
                 <ul class="main-nav">

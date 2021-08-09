@@ -11,22 +11,18 @@ include_once 'server.php'
 
     <div class="navbar">
             <div class="container">
-                <a class="logo" href="#">Comp 353 </a>
-
+                <a class="logo" href="Index.php">Comp 353 </a>
                 <nav>
                     <ul class="main-nav"> 
-                        <li><a href="Index.php">Home</a></li>
-                        <li class="person"><a href="Person_display.php">Person</a></li>
-                        <li><a href="Vaccine.php">Vaccines</a></li>
-                        <li><a href="Facility.php">Facilities</a></li>
+                        <li><a href="Person_display.php">Person</a></li>
+                        <li class="add_person"><a href="#"> -> Add a New Person</a></li>
                     </ul>
-                    
                 </nav>
             </div>
       </div>
 
     <form action="Insert_person.php" method="post">
-      <div class="container">
+      <div class="form">
         <h1>Add person</h1>
         <p>Please fill in this form to add a new person to the database.</p>
         <hr>
