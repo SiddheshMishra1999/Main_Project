@@ -95,25 +95,26 @@ include_once 'server.php'
 
           //show if canadian
           function checkIfCanadian(){
-              var inputtedCitizenship = document.getElementById("citizenship").value;
 
-              if((inputtedCitizenship.toUpperCase() == "CANADIAN") || (inputtedCitizenship.toUpperCase() == "Permanent Resident")){
+              if((document.getElementById("citizenship").value == "Canadian") || (document.getElementById("citizenship").value == "Permanent Resident")){
                   document.getElementById("medicare_label").style.display= 'block';     
                   document.getElementById("medicare").style.display= 'block';
+                  document.getElementById("SSN").style.display= 'block';   
+                  document.getElementById("SSN_label").style.display= 'block'; 
                   document.getElementById("SSN").required = TRUE;
                   document.getElementById("medicare").required = TRUE;
 
-                  document.getElementById("SSN").style.display= 'block';   
-                  document.getElementById("SSN_label").style.display= 'block';              
+             
                 }
-                else if ((inputtedCitizenship.toUpperCase() == "Visitor") || (inputtedCitizenship.toUpperCase() == "Temporary Resident")){
+                else if ((document.getElementById("citizenship").value =="Visitor") || (document.getElementById("citizenship").value == "Temporary Resident")){
                   document.getElementById("medicare_label").style.display= 'none';     
                   document.getElementById("medicare").style.display= 'none';
+                  document.getElementById("SSN").style.display= 'none';   
+                  document.getElementById("SSN_label").style.display= 'none'; 
                   document.getElementById("SSN").required = FALSE;
                   document.getElementById("medicare").required = FALSE;
 
-                  document.getElementById("SSN").style.display= 'none';   
-                  document.getElementById("SSN_label").style.display= 'none'; 
+
                 }
 
                 else{
