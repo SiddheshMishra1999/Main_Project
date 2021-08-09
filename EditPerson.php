@@ -15,7 +15,7 @@ include_once 'server.php'
                 <nav>
                     <ul class="main-nav">
                         <li><a href="Person_display.php">Person</a></li>
-                        <li class="add_person"><a href="#"> > Add a New Person</a></li>
+                        <li class="add_person"><a href="#"> > Edit Person</a></li>
                     </ul>
                 </nav>
             </div>
