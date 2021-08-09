@@ -83,10 +83,21 @@ if($user){
 */
 if(count($errors) == 0){
 
-  $query = "INSERT INTO Person VALUES ('$person_id', '$SSN', '$passport_num', '$medicare', '$first_name', '$last_name', '$dob','$telephone','$address','$email','$citizenship','$postal_code')";
+  $query = "UPDATE Person SET SSN = '$SSN',
+  passport_num = '$passport_num',
+  medicare = '$medicare',
+  first_name = '$first_name',
+  last_name = '$last_name',
+  dob = '$dob',
+  telephone ='$telephone',
+  address = '$address',
+  email = '$email',
+  citizenship = '$citizenship',
+  postal_code = '$postal_code' where person_id = '$person_id'";
   mysqli_query($db,$query);
-  $query2 = "INSERT INTO Postal_code VALUES ('$postal_code','$city','$province')";
-  mysqli_query($db,$query2);
+
+  //$query2 = "UPDATE Postal_code SET postal_code = '$postal_code', city = '$city', province = '$province'";
+  //mysqli_query($db,$query2);
   // redirect to submitted page
   header("Location: Sumbit.php");
 
