@@ -116,9 +116,15 @@ mysqli_query($db,$query);
   $query12 = "UPDATE Person SET province= '$province' WHERE person_id = '$person_id'";
   mysqli_query($db,$query12);
 
+/*
+  $query = "UPDATE Postal_code SET postal_code = '$postal_code' FROM Person postal_code WHERE Person.postal_code = Postal_code.postal_code";
+  mysqli_query($db,$query);
+  $query = "UPDATE Postal_code SET city = '$city' FROM Person postal_code WHERE Person.postal_code = Postal_code.postal_code";
+  mysqli_query($db,$query);
+  $query = "UPDATE Postal_code SET province = '$province' FROM Person postal_code WHERE Person.postal_code = Postal_code.postal_code";
+  mysqli_query($db,$query);
 
-  //$query2 = "UPDATE Postal_code SET postal_code = '$postal_code', city = '$city', province = '$province'";
-  //mysqli_query($db,$query2);
+  */
   // redirect to submitted page
   header("Location: Sumbit.php");
 
