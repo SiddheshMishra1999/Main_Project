@@ -16,7 +16,7 @@
                     <li><a href ="Workers.php">Workers</a></li>
                 </ul>
 
-                <ul class="side-nav">
+                <ul class="side-nav" style="Float=Right">
                     <li><a href="Person.php">Add a New Person </li>
                     <li><a href="DeletePerson.php">Delete a Person </li>
 
