@@ -37,6 +37,7 @@ echo "<table id = 'facility_table' class = 'facility_table' table border = '1'>
 <th> Facility Type </th>
 <th> Faciliy Name </th>
 <th>  Address </th> 
+<th> Webaddress </th>
 <th> Telephone </th>
 <th> Postal Code </th>
 ";
