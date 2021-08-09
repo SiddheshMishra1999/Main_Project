@@ -42,8 +42,6 @@ if(empty($postal_code)) {
   $postal_code = "SELECT postal_code FROM Person WHERE person_id = $person_id";
 }
 
-
-
 if(empty($city)) {
   $city = "SELECT city FROM Person WHERE person_id = $person_id";
 }
@@ -59,6 +57,7 @@ if(empty($passport_num)) {
 if(empty($citizenship)) {
   $citizenship = "SELECT citizenship FROM Person WHERE person_id = $person_id";
 }
+
 if(empty($SSN)) {
   $SSN = "SELECT SSN FROM Person WHERE person_id = $person_id";
 }
@@ -68,22 +67,6 @@ if(empty($province)) {
 
 
 
-/*
-//check db for existing person unique values
-$user_check_query = "SELECT * FROM Person WHERE person_id = '$person_id' or medicare = '$medicare' or SSN = '$SSN' or passport_num = '$passport_num' LIMIT 1";
-
-$results = mysqli_query($db, $user_check_query);
-$user = mysqli_fetch_assoc($results);
-
-if($user){
-
-  if($user['person_id'] === $person_id){array_push($errors, "Person ID already exist");}
-  // NOTE:this was commented out because of the NULL situation, has this been handled with triggers?
-//  if($user['SSN'] === $SSN){array_push($errors, "SSN already exist");}
-//  if($user['medicare'] === $medicare){array_push($errors, "Medicare already exist");}
-//  if($user['passport_num'] === $passport_num){array_push($errors, "Passport already exist");}
-}
-*/
 $query = "UPDATE Person SET first_name = '$first_name' WHERE person_id = '$person_id'";
 mysqli_query($db,$query);
 $query = "UPDATE Person SET last_name = '$last_name' WHERE person_id = '$person_id'";
@@ -94,9 +77,14 @@ $query = "UPDATE Person SET dob = '$dob' WHERE person_id = '$person_id'";
 mysqli_query($db,$query);
 $query = "UPDATE Person SET telephone = '$telephone' WHERE person_id = '$person_id'";
 mysqli_query($db,$query);
+$query = "UPDATE Person SET postal_code = '$postal_code' WHERE person_id = '$person_id'";
+mysqli_query($db,$query);
 
-  $query7 = "UPDATE Person SET city = '$city' WHERE person_id = '$person_id'";
+
+  $query7 = "UPDATE Postal_code SET city = '$city' WHERE postal_code= '$postal_code'";
   mysqli_query($db,$query7);
+
+
 
   $query8 = "UPDATE Person SET adress= '$address' WHERE person_id = '$person_id'";
   mysqli_query($db,$query8);
@@ -113,18 +101,11 @@ mysqli_query($db,$query);
   $query12 = "UPDATE Person SET SSN= '$SSN' WHERE person_id = '$person_id'";
   mysqli_query($db,$query12);
 
-  $query12 = "UPDATE Person SET province= '$province' WHERE person_id = '$person_id'";
+  $query12 = "UPDATE Postal_code SET province= '$province' WHERE postal_code = '$postal_code'";
   mysqli_query($db,$query12);
 
-/*
-  $query = "UPDATE Postal_code SET postal_code = '$postal_code' FROM Person postal_code WHERE Person.postal_code = Postal_code.postal_code";
-  mysqli_query($db,$query);
-  $query = "UPDATE Postal_code SET city = '$city' FROM Person postal_code WHERE Person.postal_code = Postal_code.postal_code";
-  mysqli_query($db,$query);
-  $query = "UPDATE Postal_code SET province = '$province' FROM Person postal_code WHERE Person.postal_code = Postal_code.postal_code";
-  mysqli_query($db,$query);
 
-  */
+
   // redirect to submitted page
   header("Location: Sumbit.php");
 

@@ -1,6 +1,8 @@
 <?php
 
-include_once 'server.php'
+include_once 'server.php';
+header( "refresh:5 ;url=Person_display.php" );
+
 
 ?>
 
@@ -29,7 +31,39 @@ include_once 'server.php'
             </nav>
         </div>
     </div>
-    <h1>  Failed to Submit.  </h1>
+    <div class="timer2">
+          <h1> </h1> 
+    </div>
+    <script>
+         var h1 = document.getElementsByTagName("h1");
+            h1[0].innerHTML = " Failed to submit: Person id does not exist! Redirecting to Person page in 5 seconds";
+
+            var sec         = 5,
+            countDiv    = document.getElementById("timer2"),
+            secpass,
+            countDown   = setInterval(function () {
+                'use strict';
+                
+                secpass();
+            }, 1000);
+
+            function secpass() {
+            'use strict';
+            
+            if (sec > 0) {
+                
+                sec = sec - 1;
+                
+            } else {
+                
+                clearInterval(countDown);
+                
+                countDiv.innerHTML = 'countdown done';
+                
+            }
+        }
+
+    </script>
 
 </body>
 </html>
