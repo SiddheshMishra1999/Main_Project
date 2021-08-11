@@ -16,7 +16,7 @@ $city = mysqli_real_escape_string($db, $_POST['province']);
 
 
 //check db for existing person unique values
-$user_check_query = "SELECT * FROM Person WHERE facility_id = '$facility_id' or webaddress = '$webaddress' or name = '$name' or address = '$address' LIMIT 1";
+$user_check_query = "SELECT * FROM Facility WHERE facility_id = '$facility_id' or webaddress = '$webaddress' or name = '$name' or address = '$address' LIMIT 1";
 $results = mysqli_query($db, $user_check_query);
 $user = mysqli_fetch_assoc($results);
 
@@ -30,7 +30,7 @@ if($user){
 }
   if(count($errors) == 0){
 
-    $query = "INSERT INTO Facility VALUES ('$facility_id', '$type_name', '$name', '$address', '$webaddress', '$telephone', '$postal_code')";
+    $query = "INSERT INTO Facility VALUES ('$facility_id', '$type_name', '$name', '$address', '$webaddress', '$telephone', '$postal_code','TRUE')";
     mysqli_query($db,$query);
     $query2 = "INSERT INTO Postal_code VALUES ('$postal_code','$city','$province')";
     mysqli_query($db,$query2);

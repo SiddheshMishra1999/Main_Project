@@ -13,7 +13,7 @@ $results = mysqli_query($db, $user_check_query);
 $user = mysqli_fetch_assoc($results);
 
 if(is_null($user['facility_id'])){array_push($errors, "Facility ID doesn't exist");}
-//Prevents from deleting a person ID that does not exist in the Database.
+//Prevents from deleting a facility ID that does not exist in the Database.
 if($user){
   if($user['facility_id'] != $facility_id){array_push($errors, "Facility ID doesn't exist");}
 
@@ -26,7 +26,7 @@ if(count($errors) == 0){
   header("Location: Sumbit.php");
 }
 else{
-  header("Location: Failed.php");
+  header("Location: Failedfacility.php");
 }
 //end deleting Facility
 
