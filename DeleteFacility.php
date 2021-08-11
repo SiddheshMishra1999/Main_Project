@@ -15,6 +15,7 @@ include_once 'server.php';
 
             <nav>
                 <ul class="main-nav">
+                    <li><a href="Facility.php">Facility</a></li>
                     <li class="Delete_facility"><a href="#"> > Delete a Facility</a></li>
                 </ul>
 
@@ -27,7 +28,6 @@ include_once 'server.php';
     <h1>Delete Facility</h1>
     <p>Please enter the Facility ID that you wish to render inactive </p>
     <hr>
-  <label id="facility_id_label" for="facility_id">Person ID: </label>
   <label id="facility_id_label" for="facility_id">Facility ID: </label>
   <input type="number" name="facility_id" id="facility_id"required><br><br>
 
