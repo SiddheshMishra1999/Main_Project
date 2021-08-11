@@ -25,7 +25,9 @@ header( "refresh:5 ;url=Facility.php" );
                     <li ><a href="Index.php">Home</a></li>
                     <li><a href="Facility.php"]>Facility</a></li>
                     <li><a href="Vaccine.php">Vaccines</a></li>
+                    <li><a href="Received_display.php">Vaccinations</a></li>
                     <li><a href="Facility.php">Facilities</a></li>
+                    
                 </ul>
 
             </nav>

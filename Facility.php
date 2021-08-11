@@ -12,6 +12,7 @@
                     <li><a href="Index.php">Home</a></li>
                     <li ><a href="Person_display.php">Person</a></li>
                     <li><a href="Vaccine.php">Vaccines</a></li>
+                    <li><a href="Received_display.php">Vaccinations</a></li>
                     <li class="facility"><a href="#">Facilities</a></li>
                     <li><a href="Workers.php">Health Safety Workers</a></li>
                 </ul>

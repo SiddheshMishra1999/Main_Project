@@ -12,6 +12,7 @@
                     <li><a href="Index.php">Home</a></li>
                     <li ><a href="Person_display.php">Person</a></li>
                     <li class="vaccine"><a href="#">Vaccines</a></li>
+                    <li><a href="Received_display.php">Vaccinations</a></li>
                     <li><a href="Facility.php">Facilities</a></li>
                     <li><a href="Workers.php">Health Safety Workers</a></li>
                 </ul>
@@ -20,8 +21,7 @@
         </div>
   </div>
 
-</body>
-</html>
+
 <?php
 
 include_once 'server.php';
@@ -31,16 +31,24 @@ FROM Vaccine, Vaccination_records
 WHERE (Vaccine.vaccine_id = Vaccination_records.Vaccine_id);";
 $results = mysqli_query($db, $query);
 // $user = mysqli_fetch_assoc($results);
-
-echo "<table id='vaccine_table' class='vaccine_table' table border='1'>
-
+?>
+<div class="container">
+  <div>
+  <label id="reception_table_label" for="reception_table"> <h4>List of all shipments:<h4> </label>
+  <table id='reception_table' class='reception_table'>
+<thead>
 <th>Vaccine ID </th>
 <th>Type Name </th>
 <th>Description</th>
 <th>Status </th>
 <th>Date of Suspension  </th>
 <th>Date of Approval  </th>
-";
+</thead>
+<tbody>
+  </div>
+<?php
+
+
 
 while($row = mysqli_fetch_array($results)){   //Creates a loop to loop through results
     echo "<tr>
@@ -53,8 +61,12 @@ while($row = mysqli_fetch_array($results)){   //Creates a loop to loop through r
     </tr>";  
 }
 
-echo "</table>"; //Close the table in HTML
 
 mysqli_close($db); //Make sure to close out the database connection
 
 ?>
+</tbody>
+</table>
+</div>
+</body>
+</html>
