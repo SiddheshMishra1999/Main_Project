@@ -4,7 +4,7 @@ include_once 'server.php'
 ?>
 
 <html>
-  <head> 
+  <head>
     <link rel="stylesheet" href="main.css">
   </head>
   <body>
@@ -13,7 +13,7 @@ include_once 'server.php'
             <div class="container">
                 <a class="logo" href="Index.php">Comp 353 </a>
                 <nav>
-                    <ul class="main-nav"> 
+                    <ul class="main-nav">
                         <li><a href="Person_display.php">Person</a></li>
                         <li class="add_person"><a href="#"> > Add a New Person</a></li>
                     </ul>
@@ -51,8 +51,22 @@ include_once 'server.php'
       <input type="text" name="city" id="city" required><br><br>
 
       <label id="province_label" for="province">Province: </label>
-      <input type="text" name="province" id="province" required><br><br>
+      <select name="province" id="province" required>
+          <option value=" " >Choose here</option>
+          <option value="Alberta">Alberta</option>
+          <option value="British Columbia">British Columbia</option>
+          <option value="Manitoba">Manitoba</option>
+          <option value="New Brunswick">New Brunswick</option>
+          <option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+          <option value="Nova Scotia">Nova Scotia</option>
+          <option value="Ontario">Ontario</option>
+          <option value="Prince Edward Island">Prince Edward Island</option>
+          <option value="Quebec">Quebec</option>
+          <option value="Saskatchewan">Saskatchewan</option>
 
+      </select>
+      <!--<input type="text" name="province" id="province" required><br><br>
+      -->
       <label id="email_label" for="email">Email </label>
       <input type="email" name="email" id="email" placeholeder="example@example.com" required><br><br>
 
@@ -78,7 +92,7 @@ include_once 'server.php'
 
         </select>
       <br>
-      
+
       <!-- <label id="citizenship_label"  for="citizenship" >Citizenship: </label>
       <input id="citizenship" type="text" name="citizenship" onkeydown = "checkIfCanadian()" size="60" placeholder="Canadian, Permanent Resident, visitor or Temporary resident"required><br><br>
     -->
@@ -89,7 +103,7 @@ include_once 'server.php'
 
       <label id="SSN_label" for="SSN">Social Security Number: </label>
       <input type="text" name="SSN" id="SSN" minlength ="9" maxlength="9" pattern="[0-9]{3}[0-9]{3}[0-9]{3}"placeholder="123456789"><br><br>
-      
+
       <label id="infection_num_label" for="infection_num">How many times have you been infected? </label>
       <input type="number" name="infection_num" id="infection_num" minlength ="1" maxlength="1" placeholder="1" onkeydown = "checkNum_of_infection()" ><br>
 
@@ -109,8 +123,8 @@ include_once 'server.php'
           //hide the input by default
           document.getElementById("medicare").style.display= 'none';
           document.getElementById("SSN").style.display= 'none';
-          document.getElementById("medicare_label").style.display= 'none';     
-          document.getElementById("SSN_label").style.display= 'none'; 
+          document.getElementById("medicare_label").style.display= 'none';
+          document.getElementById("SSN_label").style.display= 'none';
           document.getElementById("infection_num_label").style.display= 'none';
           document.getElementById("infection_num").style.display= 'none';
           document.getElementById("variant_lable").style.display= 'none';
@@ -121,19 +135,19 @@ include_once 'server.php'
           function checkIfCanadian(){
 
               if((document.getElementById("citizenship").value == "Canadian") || (document.getElementById("citizenship").value == "Permanent Resident")){
-                  document.getElementById("medicare_label").style.display= 'block';     
+                  document.getElementById("medicare_label").style.display= 'block';
                   document.getElementById("medicare").style.display= 'block';
-                  document.getElementById("SSN").style.display= 'block';   
-                  document.getElementById("SSN_label").style.display= 'block'; 
+                  document.getElementById("SSN").style.display= 'block';
+                  document.getElementById("SSN_label").style.display= 'block';
                   document.getElementById("SSN").required = true;
                   document.getElementById("medicare").required = true;
 
-             
+
                 }else if ((document.getElementById("citizenship").value =="Visitor") || (document.getElementById("citizenship").value == "Temporary Resident")){
-                  document.getElementById("medicare_label").style.display= 'none';     
+                  document.getElementById("medicare_label").style.display= 'none';
                   document.getElementById("medicare").style.display= 'none';
-                  document.getElementById("SSN").style.display= 'none';   
-                  document.getElementById("SSN_label").style.display= 'none'; 
+                  document.getElementById("SSN").style.display= 'none';
+                  document.getElementById("SSN_label").style.display= 'none';
                   document.getElementById("SSN").required = FALSE;
                   document.getElementById("medicare").required = false;
 
@@ -143,8 +157,8 @@ include_once 'server.php'
                 else{
                   document.getElementById("medicare").style.display= 'none';
                   document.getElementById("SSN").style.display= 'none';
-                  document.getElementById("medicare_label").style.display= 'none';     
-                  document.getElementById("SSN_label").style.display= 'none'; 
+                  document.getElementById("medicare_label").style.display= 'none';
+                  document.getElementById("SSN_label").style.display= 'none';
 
                 }
           }
@@ -156,26 +170,26 @@ include_once 'server.php'
                 text+= "What variant were you infected with on infection number " + index + "?";
                 document.getElementById("variant_lable").style.display= 'none';
                 document.getElementById("variant").style.display= 'block';
-                document.getElementById("variant").required = true;               
+                document.getElementById("variant").required = true;
               }
-            
+
             }else if (document.getElementById("infected").value == "No"){
 
               document.getElementById("variant_lable").style.display= 'none';
               document.getElementById("variant").style.display= 'none';
-              document.getElementById("variant").required = false;     
+              document.getElementById("variant").required = false;
             }
             else {
               document.getElementById("variant_lable").style.display= 'none';
               document.getElementById("variant").style.display= 'none';
-              document.getElementById("variant").required = false;  
+              document.getElementById("variant").required = false;
 
             }
           }
-       
 
-            
-              
+
+
+
 
 
 
