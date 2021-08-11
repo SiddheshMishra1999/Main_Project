@@ -52,7 +52,7 @@ if($user){
 }
   if(count($errors) == 0){
 
-    $query = "INSERT INTO Person VALUES ('$person_id', '$SSN', '$passport_num', '$medicare', '$first_name', '$last_name', '$dob','$telephone','$address','$email','$citizenship','$postal_code')";
+    $query = "INSERT INTO Person VALUES ('$person_id', '$SSN', '$passport_num', '$medicare', '$first_name', '$last_name', '$dob','$telephone','$address','$email','$citizenship','$postal_code','TRUE')";
     mysqli_query($db,$query);
     $query2 = "INSERT INTO Postal_code VALUES ('$postal_code','$city','$province')";
     mysqli_query($db,$query2);
@@ -60,7 +60,6 @@ if($user){
     mysqli_query($db,$query3);
     // redirect to submitted page
     header("Location: Sumbit.php");
-
 
   }
   else{
