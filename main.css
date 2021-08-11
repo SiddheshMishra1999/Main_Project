@@ -8,10 +8,9 @@ body{
 .navbar{
     background: white;
     padding: 1em;
-
-
-
+    text-align: center;
 }
+
 
 .logo{
     text-decoration: none;

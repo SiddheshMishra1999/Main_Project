@@ -5,7 +5,7 @@
 <body>
 <div class="navbar">
         <div class="container">
-            <a class="logo" href="#">Comp 353 </a>
+        <a class="logo" href="Index.php"><img class="logo" width = "60" height="60" src="Beechtown Pediatric Center.png"> </a>
 
             <nav>
                 <ul class="main-nav"> 
