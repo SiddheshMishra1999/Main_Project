@@ -25,7 +25,7 @@
 
 include_once 'server.php';
 
-$query = "SELECT shipment_num, Facility.name, Vaccine.type_name, date_of_reception, amount 
+$query = "SELECT shipment_num, Facility.name, Facility.facility_id, Vaccine.type_name, Vaccine.vaccine_id, date_of_reception, amount 
 FROM Reception, Facility, Vaccine 
 WHERE Facility.facility_id = Reception.facility_id AND Vaccine.vaccine_id = Reception.vaccine_id
 ORDER BY Reception.facility_id, Reception.shipment_num ";
@@ -36,7 +36,9 @@ echo "<table id='transfer_table' class='transfer_table' table border='1'>
 
 <th>Shipment Number </th>
 <th> Facility Name </th>
+<th> Facility ID </th>
 <th>Vaccine Name </th>
+<th> Vaccine ID </th>
 <th>Date of Reception </th>
 <th>Amount of Vaccines </th>
 
@@ -46,7 +48,9 @@ while($row = mysqli_fetch_array($results)){   //Creates a loop to loop through r
     echo "<tr>
     <td>" . $row['shipment_num'] . "</td>
     <td>" . $row['name'] . "</td>
+    <td>" . $row['facility_id'] . "</td>
     <td>" . $row['type_name'] ."</td>
+    <td>" . $row['vaccine_id'] . "</td>
     <td>" . $row['date_of_reception'] . "</td>
     <td>" . $row['amount'] ."</td>
 
