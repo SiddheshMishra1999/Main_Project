@@ -86,7 +86,7 @@ mysqli_query($db,$query);
 
 
 
-  $query8 = "UPDATE Person SET adress= '$address' WHERE person_id = '$person_id'";
+  $query8 = "UPDATE Person SET address= '$address' WHERE person_id = '$person_id'";
   mysqli_query($db,$query8);
 
   $query9 = "UPDATE Person SET email= '$email' WHERE person_id = '$person_id'";
