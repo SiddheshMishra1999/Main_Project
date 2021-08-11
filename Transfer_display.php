@@ -10,7 +10,7 @@
             <nav>
                 <ul class="main-nav"> 
                     <li><a href="Facility.php">Facility</a></li>
-                    <li class="tranfser"><a href ="#"> > Transfers</a></li>
+                    <li class="home"><a href ="#"> > Transfers</a></li>
                 </ul>
                 
             </nav>
