@@ -17,9 +17,6 @@
                 </ul>
 
                 <ul class="side-nav" style="Float=Right">
-                    <li><a href="FacilityPage.php">Add a New Person </li>
-                    <li><a href="Delete_facility.php">Delete a Person </li>
-                    <li><a href="Edit_Facility.php">Edit a Person </li>
                 </ul>
                 
             </nav>
