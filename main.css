@@ -9,7 +9,7 @@ body{
     background: white;
     padding: 1em;
 
-   
+
 
 }
 .logo{
@@ -21,7 +21,7 @@ body{
 
  .container{
     display: flex;
-} 
+}
 .Delete_person{
     display: flex;
 }
@@ -70,6 +70,12 @@ ul{
 
 
 }
+
+.add_facility{
+    background-color: orange;
+
+
+}
 .Delete_person{
     background-color: orange;
 }
@@ -92,13 +98,13 @@ table{
 th{
 
 }
-tr :nth-child(odd) { 
-    
+tr :nth-child(odd) {
+
     background-color:lightblue;
 }
 
-tr :nth-child(even) { 
-    
+tr :nth-child(even) {
+
     background-color:00CCFF;
 }
 .timer{
@@ -109,6 +115,3 @@ tr :nth-child(even) {
     color: red;
     border-radius: 2px;
 }
-
-
-
