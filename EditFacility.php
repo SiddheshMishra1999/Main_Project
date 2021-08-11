@@ -14,20 +14,20 @@ include_once 'server.php'
                 <a class="logo" href="Index.php">Comp 353 </a>
                 <nav>
                     <ul class="main-nav">
-                        <li><a href="FacilityPage.php">Facility</a></li>
-                        <li class="add_facility"><a href="#"> > Add a New Facility</a></li>
+                        <li><a href="Facility.php">Facility</a></li>
+                        <li class="add_facility"><a href="#"> > Edit Facility</a></li>
                     </ul>
                 </nav>
             </div>
       </div>
 
-    <form action="Insert_Facility.php" method="post">
+    <form action="Edit_Facility.php" method="post">
       <div class="form">
-        <h1>Add Facility</h1>
-        <p>Please fill in this form to add a new facility to the database.</p>
+        <h1>Edit Facility</h1>
+        <p>Please fill the desired information to edit a facility that already exist in the database.</p>
         <hr>
       <label id="facility_id_label" for="facility_id">Facility ID: </label>
-      <input type="number" name="facility_id" id="facility_id" required><br><br>
+      <input type="number" name="facility_id" id="facility_id"required><br><br>
 
       <label id="name_label" for="name">Name: </label>
       <input type="text" name="name" id="name" required><br><br>
