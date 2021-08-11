@@ -110,7 +110,7 @@ li a{
     border-radius: 2px;
 }
 
-.employee_table{
+table{
     border-collapse: collapse;
     margin: 25px 0;
     font-size: 0.9em;
@@ -118,27 +118,27 @@ li a{
     min-width: 400px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
-.employee_table thead tr {
+table thead tr {
     background-color: #009879;
     color: #ffffff;
     text-align: left;
 }
-.employee_table th,
-.employee_table td {
+table th,
+table td {
     padding: 12px 15px;
 }
-.employee_table tbody tr {
+table tbody tr {
     border-bottom: 1px solid #dddddd;
 }
 
-.employee_table tbody tr:nth-of-type(even) {
+table tbody tr:nth-of-type(even) {
     background-color: #f3f3f3;
 }
 
-.employee_table tbody tr:last-of-type {
+table tbody tr:last-of-type {
     border-bottom: 2px solid #009879;
 }
-.employee_table tbody tr.active-row {
+table tbody tr.active-row {
     font-weight: bold;
     color: #009879;
 }
