@@ -39,7 +39,6 @@
 
 include_once 'server.php';
 
-$query_1 = "SELECT * FROM Facility";
 
 $results = mysqli_query($db, $query_1);
 
