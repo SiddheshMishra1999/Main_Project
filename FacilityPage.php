@@ -21,7 +21,7 @@ include_once 'server.php'
             </div>
       </div>
 
-    <form action="Insert_person.php" method="post">
+    <form action="Insert_Facility.php" method="post">
       <div class="form">
         <h1>Add person</h1>
         <p>Please fill in this form to add a new person to the database.</p>
