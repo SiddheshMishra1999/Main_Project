@@ -16,10 +16,10 @@
                     <li><a href ="Workers.php">Workers</a></li>
                 </ul>
 
-                <ul class="side-nav" style="Float=Right">
-                    <li><a href="Person.php">Add a New Person </li>
-                    <li><a href="DeletePerson.php">Delete a Person </li>
-                    <li><a href="EditPerson.php">Edit a Person </li>
+                <ul class="side-nav" >
+                    <li style="Float=Right"><a href="Person.php">Add a New Person </li>
+                    <li style="Float=Right"><a href="DeletePerson.php">Delete a Person </li>
+                    <li style="Float=Right"><a href="EditPerson.php">Edit a Person </li>
 
 
 

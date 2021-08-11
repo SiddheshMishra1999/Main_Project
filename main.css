@@ -12,6 +12,7 @@ body{
    
 
 }
+
 .logo{
     text-decoration: none;
     font-weight: bold;
@@ -71,6 +72,9 @@ ul{
 
 }
 .Delete_person{
+    background-color: orange;
+}
+.Delete_facility{
     background-color: orange;
 }
 li{

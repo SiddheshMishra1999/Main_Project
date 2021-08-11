@@ -22,6 +22,12 @@
                     <li><a href="Edit_Facility.php">Edit a Facility </li>
                 </ul>
 
+                <ul class="side-side-nav" style="text-allign=Right">
+                    <li><a href="Transfer_display.php">Transfers </li>
+                    <li><a href="Reception_display.php">Shipments </li>
+                    <li><a href="Inventory_display.php">Inventory  </li>
+                </ul>
+
             </nav>
         </div>
   </div>
