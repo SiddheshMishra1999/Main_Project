@@ -17,9 +17,9 @@ $city = mysqli_real_escape_string($db, $_POST['province']);
 
 //check for missing values
 
-if(empty($facility_id)) {
-  $facility_id = "SELECT first_name FROM Facility WHERE facility_id = $facility_id";
-}
+// if(empty($facility_id)) {
+//   $facility_id = "SELECT first_name FROM Facility WHERE facility_id = $facility_id";
+// }
 if(empty($type_name)) {
   $type_name = "SELECT type_name FROM Facility WHERE facility_id = $facility_id";
 }
@@ -42,19 +42,6 @@ if(empty($city)) {
 if(empty($address)) {
   $address = "SELECT address FROM Facility WHERE facility_id = $facility_id";
 }
-if(empty($email)) {
-  $email = "SELECT email FROM Facility WHERE facility_id = $facility_id";
-}
-if(empty($passport_num)) {
-  $passport_num = "SELECT passport_num FROM Facility WHERE facility_id = $facility_id";
-}
-if(empty($citizenship)) {
-  $citizenship = "SELECT citizenship FROM Facility WHERE facility_id = $facility_id";
-}
-
-if(empty($SSN)) {
-  $SSN = "SELECT SSN FROM Facility WHERE facility_id = $facility_id";
-}
 if(empty($province)) {
   $province = "SELECT SSN FROM Facility WHERE facility_id = $facility_id";
 }
@@ -73,10 +60,8 @@ $query = "UPDATE Facility SET telephone = '$telephone' WHERE facility_id = '$fac
 mysqli_query($db,$query);
 $query = "UPDATE Facility SET postal_code = '$postal_code' WHERE facility_id = '$facility_id'";
 mysqli_query($db,$query);
-
-
-  $query7 = "UPDATE Postal_code SET city = '$city' WHERE postal_code= '$postal_code'";
-  mysqli_query($db,$query7);
+$query7 = "UPDATE Postal_code SET city = '$city' WHERE postal_code= '$postal_code'";
+mysqli_query($db,$query7);
 
 
 
