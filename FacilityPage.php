@@ -14,8 +14,8 @@ include_once 'server.php'
                 <a class="logo" href="Index.php">Comp 353 </a>
                 <nav>
                     <ul class="main-nav">
-                        <li><a href="Person_display.php">Person</a></li>
-                        <li class="add_person"><a href="#"> > Add a New Person</a></li>
+                        <li><a href="FacilityPage.php">Person</a></li>
+                        <li class="add_dacility"><a href="#"> > Add a New Facility</a></li>
                     </ul>
                 </nav>
             </div>
@@ -43,6 +43,24 @@ include_once 'server.php'
 
       <label id="postal_code_label" for="postal_code">Postal Code: </label>
       <input type="text" name="postal_code" id="postal_cose" pattern="[A-Z]{1}[0-9]{1}[A-Z]{1} [0-9]{1}[A-Z]{1}[0-9]{1}" placeholder="A1A 1A1"  required><br><br>
+
+      <label id="province_label" for="province">Province: </label>
+      <select name="province" id="province" required>
+          <option value=" " >Choose here</option>
+          <option value="Alberta">Alberta</option>
+          <option value="British Columbia">British Columbia</option>
+          <option value="Manitoba">Manitoba</option>
+          <option value="New Brunswick">New Brunswick</option>
+          <option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+          <option value="Nova Scotia">Nova Scotia</option>
+          <option value="Nunavut">Nunavut</option>
+          <option value="Ontario">Ontario</option>
+          <option value="Prince Edward Island">Prince Edward Island</option>
+          <option value="Quebec">Quebec</option>
+          <option value="Saskatchewan">Saskatchewan</option>
+
+      </select>
+      <br><br>
 
       <label id="city_label" for="city">City: </label>
       <input type="text" name="city" id="city" required><br><br>
