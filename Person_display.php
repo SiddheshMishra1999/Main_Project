@@ -38,6 +38,7 @@
 include_once 'server.php';
 
 $query = "SELECT * FROM Person";
+$query = "SELECT * FROM Person GROUP BY Person.person_id, isActive";
 $results = mysqli_query($db, $query);
 // $user = mysqli_fetch_assoc($results);
 
@@ -55,6 +56,7 @@ echo "<table id='person_table' class='person_table' table border='1'>
 <th>Email </th>
 <th>Citizenship </th>
 <th>Postal Code </th>
+<th> Active Status </th>
 
 ";
 
@@ -72,6 +74,7 @@ while($row = mysqli_fetch_array($results)){   //Creates a loop to loop through r
     <td>" . $row['email'] . "</td>
     <td>" . $row['citizenship'] ."</td>
     <td>" . $row['postal_code'] . "</td>
+    <td> " .$row['isActive'] . " </td>
     </tr>";  
 }
 
