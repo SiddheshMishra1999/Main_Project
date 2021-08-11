@@ -35,7 +35,7 @@ if($user){
     $query2 = "INSERT INTO Postal_code VALUES ('$postal_code','$city','$province')";
     mysqli_query($db,$query2);
     // redirect to submitted page
-    header("Location: Sumbit.php");
+    header("Location: Submitfacility.php");
 
 
   }

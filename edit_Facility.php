@@ -70,7 +70,7 @@ mysqli_query($db,$query12);
 
 
   // redirect to submitted page
-  header("Location: Sumbit.php");
+  header("Location: Submitfacility.php");
 
 
 
