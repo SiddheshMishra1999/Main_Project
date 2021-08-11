@@ -66,6 +66,6 @@ if($user){
   else{
       header("Location: Failed.php");
   }
-  
+
 
 ?>
