@@ -54,6 +54,7 @@ echo "<table id = 'facility_table' class = 'facility_table' table border = '1'>
 <th> Webaddress </th>
 <th> Telephone </th>
 <th> Postal Code </th>
+<th> Active Status </th>
 ";
 
 while($row = mysqli_fetch_array($results)) {
