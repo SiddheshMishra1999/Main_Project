@@ -30,7 +30,7 @@ if($user){
 
   }
   else{
-      header("Location: Failedfacility.php");
+      header("Location: Failedreception.php");
   }
 
 
