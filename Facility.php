@@ -15,6 +15,12 @@
                     <li class="facility"><a href="Facility.php">Facilities</a></li>
                     <li><a href ="Workers.php">Workers</a></li>
                 </ul>
+
+                <ul class="side-nav" style="Float=Right">
+                    <li><a href="FacilityPage.php">Add a New Facilitly </li>
+                    <li><a href="Delete_facility.php">Delete a Facility </li>
+                    <li><a href="Edit_Facility.php">Edit a Facility </li>
+                </ul>
                 
             </nav>
         </div>
