@@ -38,7 +38,7 @@ include_once 'server.php'
       <label id="telephone_label" for="telephone">Telephone number: </label>
       <input type="tel" name="telephone" id="telephone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="xxx-xxx-xxxx"  required><br><br>
 
-      <label id="webaddress_label" for="webaddress">Address: </label>
+      <label id="webaddress_label" for="webaddress">Webaddress: </label>
       <input type="text" name="webaddress" id="webaddress" required><br><br>
 
       <label id="postal_code_label" for="postal_code">Postal Code: </label>
