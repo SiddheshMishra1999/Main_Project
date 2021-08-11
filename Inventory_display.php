@@ -39,6 +39,7 @@ $results1 = mysqli_query($db, $query_1);
 ?>
 <div class="container">
 <div>
+<label id="Pfizer_inventory_label" for="inventory_table1"> <h4>Inventory of vaccine type Pfizer:<h4> </label>
 <table id = 'inventory_table1' class = 'inventory_table1' >
 
 <th> Facility ID </th>
@@ -64,6 +65,7 @@ $results2 = mysqli_query($db, $query_2);
 </div>
 <div class="container">
   <div>
+  <label id="Madorna_inventory_label" for="inventory_table2"> <h4>Inventory of vaccine type Madorna:<h4> </label>
   <table id = 'inventory_table2' class = 'inventory_table2' >
 
 <th> Facility ID </th>
@@ -88,6 +90,7 @@ $results3 = mysqli_query($db, $query_3);
 </div>
 <div class="container">
  <div>
+ <label id="Astra_inventory_label" for="inventory_table3"> <h4>Inventory of vaccine type Astra Zeneca:<h4> </label>
  <table id = 'inventory_table3' class = 'inventory_table3'>
 <th> Facility ID </th>
 <th> Vaccine Type </th>
