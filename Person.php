@@ -103,7 +103,7 @@ include_once 'server.php'
 
       <label id="SSN_label" for="SSN">Social Security Number: </label>
       <input type="text" name="SSN" id="SSN" minlength ="9" maxlength="9" pattern="[0-9]{3}[0-9]{3}[0-9]{3}"placeholder="123456789"><br><br>
-
+<!--
       <label id="infection_num_label" for="infection_num">How many times have you been infected? </label>
       <input type="number" name="infection_num" id="infection_num" minlength ="1" maxlength="1" placeholder="1" onkeydown = "checkNum_of_infection()" ><br>
 
@@ -116,6 +116,7 @@ include_once 'server.php'
             <option value="Gamma">Gamma</option>
 
         </select>
+-->
       </div>
       <script>
 
@@ -162,16 +163,11 @@ include_once 'server.php'
 
                 }
           }
-          // check number of infection
+          /*// check number of infection
           function checkIfInfected(){
             if((document.getElementById("infected").value == "Yes"){
               function checkNum_of_infection() {
-              for (let index = 0; index <= document.getElementById("infection_num"); index++) {
-                text+= "What variant were you infected with on infection number " + index + "?";
-                document.getElementById("variant_lable").style.display= 'none';
-                document.getElementById("variant").style.display= 'block';
-                document.getElementById("variant").required = true;
-              }
+              
 
             }else if (document.getElementById("infected").value == "No"){
 
@@ -186,6 +182,7 @@ include_once 'server.php'
 
             }
           }
+          */
 
 
 
