@@ -62,26 +62,10 @@ $query = "UPDATE Facility SET postal_code = '$postal_code' WHERE facility_id = '
 mysqli_query($db,$query);
 $query7 = "UPDATE Postal_code SET city = '$city' WHERE postal_code= '$postal_code'";
 mysqli_query($db,$query7);
-
-
-
-  $query8 = "UPDATE Facility SET adress= '$address' WHERE facility_id = '$facility_id'";
-  mysqli_query($db,$query8);
-
-  $query9 = "UPDATE Facility SET email= '$email' WHERE facility_id = '$facility_id'";
-  mysqli_query($db,$query9);
-
-  $query10 = "UPDATE Facility SET passport_num= '$passport_num' WHERE facility_id = '$facility_id'";
-  mysqli_query($db,$query10);
-
-  $query11 = "UPDATE Facility SET citizenship= '$citizenship' WHERE facility_id = '$facility_id'";
-  mysqli_query($db,$query11);
-
-  $query12 = "UPDATE Facility SET SSN= '$SSN' WHERE facility_id = '$facility_id'";
-  mysqli_query($db,$query12);
-
-  $query12 = "UPDATE Postal_code SET province= '$province' WHERE postal_code = '$postal_code'";
-  mysqli_query($db,$query12);
+$query8 = "UPDATE Facility SET address= '$address' WHERE facility_id = '$facility_id'";
+mysqli_query($db,$query8);
+$query12 = "UPDATE Postal_code SET province= '$province' WHERE postal_code = '$postal_code'";
+mysqli_query($db,$query12);
 
 
 
