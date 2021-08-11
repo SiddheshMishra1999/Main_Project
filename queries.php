@@ -25,7 +25,7 @@
 
 include_once 'server.php';
 
-$query_12 = "SELECT P.first_name, P.last_name, P.dob, P.email, P.telephone, city, date_received, vaccine_id, IF(COUNT(I.infection_date)> 0 , "YES", "NO") AS infected, I.num AS Number_of_infection
+$query_12 = "SELECT P.first_name, P.last_name, P.dob, P.email, P.telephone, city, date_received, vaccine_id, IF(COUNT(I.infection_date)> 0 , 'YES', 'NO') AS infected, I.num AS Number_of_infection
 FROM Person P
 LEFT JOIN Infected AS I on P.person_id =I.person_id
 INNER JOIN Postal_code AS PC on P.postal_code = PC.postal_code
@@ -35,8 +35,8 @@ AND P.telephone NOT IN (SELECT telephone FROM Received, Person WHERE Person.pers
 AND 60 <= FLOOR(DATEDIFF(CURRENT_DATE,P.dob)/365.25)
 GROUP BY P.person_id";
 
-$query_13 = "select a.person_id, P.first_name, P.last_name, P.dob, P.email, P.telephone, PC.city,
-IF(COUNT(I.infection_date) > 0, "YES", "NO") AS infected ,a.date_received, c.type_name, d.type_name
+$query_13 = "SELECT a.person_id, P.first_name, P.last_name, P.dob, P.email, P.telephone, PC.city,
+IF(COUNT(I.infection_date) > 0, 'YES', 'NO') AS infected ,a.date_received, c.type_name, d.type_name
 from Person P
 LEFT JOIN Infected AS I on P.person_id = I.person_id
 INNER JOIN Received AS a ON P.person_id = a.person_id
@@ -140,16 +140,23 @@ HAVING COUNT(Received.dose_num)<=1
 ORDER BY Worker.employee_id ASC";
 
 
-$results12 = mysqli_query($db, $query_1);
+$results12 = mysqli_query($db, $query_2);
 ?>
 <div class="container">
 <div>
 <label id="Pfizer_inventory_label" for="inventory_table1"> <h4>Inventory of vaccine type Pfizer:<h4> </label>
 <table id = 'inventory_table1' class = 'inventory_table1' >
 
-<th> Facility ID </th>
-<th> Vaccine Type </th>
-<th> Amount </th>
+<th> First Name </th>
+<th> Last Name </th>
+<th> Date of Birth </th>
+<th> Email Address </th>
+<th> Telephone </th>
+<th> City </th>
+<th> Date of Vaccine Reception </th>
+<th> Administered Vaccine ID </th>
+<th> Infection History </th>
+<th> Number of Infections </th>
 </div>
 
 <?php
