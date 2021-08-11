@@ -20,10 +20,7 @@
         </div>
   </div>
 
-  <h1>Workers</h1>
 
-</body>
-</html>
 
 <?php
 
@@ -34,7 +31,9 @@ FROM Worker, Works_at, Person, Facility
 WHERE (Worker.manages_facility_id IS NULL)
 AND (Person.person_id = Worker.person_id)
 AND (Works_at.facility_id = Facility.facility_id)
-AND (Worker.employee_id = Works_at.employee_id)";
+AND (Worker.employee_id = Works_at.employee_id)
+GROUP BY start_date
+ORDER BY end_date ASC , start_date ASC";
 
 
 $query_2 = "SELECT first_name, last_name, Worker.employee_id, Worker.person_id, Worker.manages_facility_id, start_date, end_date
@@ -42,13 +41,19 @@ FROM Worker, Works_at, Person, Facility
 WHERE (Worker.manages_facility_id IS NOT NULL)
 AND (Person.person_id = Worker.person_id)
 AND (Works_at.facility_id = Facility.facility_id)
-AND (Worker.employee_id = Works_at.employee_id)";
+AND (Worker.employee_id = Works_at.employee_id)
+GROUP BY start_date
+ORDER BY end_date ASC, start_date ASC";
 
 
 $results1 = mysqli_query($db, $query_1);
 $results2 = mysqli_query($db, $query_2);
 
-echo "<table id = 'employee_table' class = 'employee_table' table border = '1'>
+?>
+<div class="container">
+  <div>
+  <label id="emp_table_label" for="emplaoyee_table"> <h4>List of all Workers:<h4> </label>
+  <table id = 'employee_table' class = 'employee_table'>
 
 <th> First Name </th>
 <th> Last Name </th>
@@ -57,7 +62,10 @@ echo "<table id = 'employee_table' class = 'employee_table' table border = '1'>
 <th> Facility ID </th>
 <th> Start Date </th>
 <th> End Date </th>
-";
+  </div>
+
+<?php
+
 
 while($row = mysqli_fetch_array($results1)) {
 
@@ -71,17 +79,25 @@ while($row = mysqli_fetch_array($results1)) {
     <td> " .$row['end_date'] . "</td>
     </tr>";
 }
+?>
 
-echo "<table id = 'employee_table2' class = 'employee_table2' table border = '1'>
+</table>
+</div>
+<div class="container">
+  <div>
+  <label id="emp_table_label" for="emplaoyee_table2"> <h4>List of all Managers:<h4> </label>
+  <table id = 'employee_table2' class = 'employee_table2'>
 
-<th> First Name </th>
+ <th> First Name </th>
 <th> Last Name </th>
 <th> Employee ID </th>
 <th> Person ID </th>
 <th> Managed Facility ID </th>
 <th> Start Date </th>
 <th> End Date </th>
-";
+  </div>
+
+  <?php
 
 while($row = mysqli_fetch_array($results2)) {
 
@@ -96,10 +112,13 @@ while($row = mysqli_fetch_array($results2)) {
     </tr>";
 }
 
-echo "</table>";
 
 mysqli_close($db);
 
 
 
 ?>
+</table>
+</div>
+</body>
+</html>
