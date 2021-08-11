@@ -18,9 +18,6 @@
         </div>
   </div>
 
-</body>
-</html>
-
 <?php
 
 include_once 'server.php';
@@ -39,13 +36,17 @@ WHERE (Inventory.vaccine_id = 3) AND (Inventory.vaccine_id = Vaccine.vaccine_id)
 
 
 $results1 = mysqli_query($db, $query_1);
-
-echo "<table id = 'inventory_table1' class = 'inventory_table1' table border = '1'>
+?>
+<div class="container">
+<div>
+<table id = 'inventory_table1' class = 'inventory_table1' >
 
 <th> Facility ID </th>
 <th> Vaccine Type </th>
 <th> Amount </th>
-";
+</div>
+
+<?php
 
 while($row = mysqli_fetch_array($results1)) {
 
@@ -57,13 +58,20 @@ while($row = mysqli_fetch_array($results1)) {
 }
 
 $results2 = mysqli_query($db, $query_2);
+?>
 
-echo "<table id = 'inventory_table2' class = 'inventory_table2' table border = '1'>
+</table>
+</div>
+<div class="container">
+  <div>
+  <table id = 'inventory_table2' class = 'inventory_table2' >
 
 <th> Facility ID </th>
 <th> Vaccine Type </th>
 <th> Amount </th>
-";
+  </div>
+  <?php
+
 
 while($row = mysqli_fetch_array($results2)) {
 
@@ -75,13 +83,19 @@ while($row = mysqli_fetch_array($results2)) {
 }
 
 $results3 = mysqli_query($db, $query_3);
-
-echo "<table id = 'inventory_table3' class = 'inventory_table3' table border = '1'>
-
+?>
+</table>
+</div>
+<div class="container">
+ <div>
+ <table id = 'inventory_table3' class = 'inventory_table3'>
 <th> Facility ID </th>
 <th> Vaccine Type </th>
 <th> Amount </th>
-";
+
+ </div>
+<?php
+ 
 
 while($row = mysqli_fetch_array($results3)) {
 
@@ -91,13 +105,13 @@ while($row = mysqli_fetch_array($results3)) {
     <td> " . $row['amount'] . "</td>
     </tr>";
 }
-
-
-
-echo "</table>";
-
 mysqli_close($db);
-
-
-
 ?>
+
+
+</table>  
+</div>
+</div>
+
+</body>
+</html>
