@@ -23,7 +23,7 @@ if(count($errors) == 0){
 
   $query = "UPDATE Facility SET isactive = 'FALSE' WHERE facility_id = '$facility_id'";
   mysqli_query($db,$query);
-  header("Location: Sumbit.php");
+  header("Location: Submitfacility.php");
 }
 else{
   header("Location: Failedfacility.php");

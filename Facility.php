@@ -19,7 +19,7 @@
                 <ul class="side-nav" style="Float=Right">
                     <li><a href="FacilityPage.php">Add a New Facilitly </li>
                     <li><a href="DeleteFacility.php">Delete a Facility </li>
-                    <li><a href="Edit_Facility.php">Edit a Facility </li>
+                    <li><a href="EditFacility.php">Edit a Facility </li>
                 </ul>
 
                 <ul class="side-side-nav" >

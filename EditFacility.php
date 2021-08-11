@@ -30,22 +30,22 @@ include_once 'server.php'
       <input type="number" name="facility_id" id="facility_id"required><br><br>
 
       <label id="name_label" for="name">Name: </label>
-      <input type="text" name="name" id="name" required><br><br>
+      <input type="text" name="name" id="name"><br><br>
 
       <label id="address_label" for="address">Address: </label>
-      <input type="text" name="address" id="address" required><br><br>
+      <input type="text" name="address" id="address"><br><br>
 
       <label id="telephone_label" for="telephone">Telephone number: </label>
-      <input type="tel" name="telephone" id="telephone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="xxx-xxx-xxxx"  required><br><br>
+      <input type="tel" name="telephone" id="telephone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="xxx-xxx-xxxx"><br><br>
 
       <label id="webaddress_label" for="webaddress">Webaddress: </label>
-      <input type="text" name="webaddress" id="webaddress" required><br><br>
+      <input type="text" name="webaddress" id="webaddress"><br><br>
 
       <label id="postal_code_label" for="postal_code">Postal Code: </label>
-      <input type="text" name="postal_code" id="postal_cose" pattern="[A-Z]{1}[0-9]{1}[A-Z]{1} [0-9]{1}[A-Z]{1}[0-9]{1}" placeholder="A1A 1A1"  required><br><br>
+      <input type="text" name="postal_code" id="postal_cose" pattern="[A-Z]{1}[0-9]{1}[A-Z]{1} [0-9]{1}[A-Z]{1}[0-9]{1}" placeholder="A1A 1A1"><br><br>
 
       <label id="province_label" for="province">Province: </label>
-      <select name="province" id="province" required>
+      <select name="province" id="province">
           <option value=" " >Choose here</option>
           <option value="Alberta">Alberta</option>
           <option value="British Columbia">British Columbia</option>
@@ -63,10 +63,10 @@ include_once 'server.php'
       <br><br>
 
       <label id="city_label" for="city">City: </label>
-      <input type="text" name="city" id="city" required><br><br>
+      <input type="text" name="city" id="city"><br><br>
 
       <label id="type_name" for="type_name">Type: </label>
-      <select name="type_name" id="type_name" required>
+      <select name="type_name" id="type_name">
           <option value=" " >Choose here</option>
           <option value="clinic">Clinic</option>
           <option value="hospital">Hospital</option>
