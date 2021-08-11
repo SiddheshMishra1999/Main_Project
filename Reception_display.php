@@ -19,8 +19,6 @@
         </div>
   </div>
 
-</body>
-</html>
 
 
 <?php
@@ -33,18 +31,18 @@ WHERE Facility.facility_id = Reception.facility_id AND Vaccine.vaccine_id = Rece
 ORDER BY Reception.facility_id, Reception.shipment_num ";
 $results = mysqli_query($db, $query);
 // $user = mysqli_fetch_assoc($results);
+?>
+<div class="container">
+  <div>
+  <label id="reception_table_label" for="reception_table"> <h4>List of all shipments:<h4> </label>
+  <table id='reception_table' class='reception_table'>
+<thead>
 
-echo "<table id='transfer_table' class='transfer_table' table border='1'>
+</thead>
+<tbody>
+  </div>
+<?php
 
-<th>Shipment Number </th>
-<th> Facility Name </th>
-<th> Facility ID </th>
-<th>Vaccine Name </th>
-<th> Vaccine ID </th>
-<th>Date of Reception </th>
-<th>Amount of Vaccines </th>
-
-";
 
 while($row = mysqli_fetch_array($results)){   //Creates a loop to loop through results
     echo "<tr>
@@ -60,8 +58,12 @@ while($row = mysqli_fetch_array($results)){   //Creates a loop to loop through r
     </tr>";  
 }
 
-echo "</table>"; //Close the table in HTML
 
 mysqli_close($db); //Make sure to close out the database connection
 
 ?>
+</tbody>
+</table>
+</div>
+</body>
+</html>

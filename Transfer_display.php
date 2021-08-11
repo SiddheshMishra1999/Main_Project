@@ -19,10 +19,6 @@
         </div>
   </div>
 
-</body>
-</html>
-
-
 <?php
 
 include_once 'server.php';
@@ -35,9 +31,12 @@ WHERE Ft.facility_id = Transfer.facility_to AND Vaccine.vaccine_id = Transfer.va
 AND  Fi.facility_id = Transfer.facility_id";
 $results = mysqli_query($db, $query);
 // $user = mysqli_fetch_assoc($results);
-
-echo "<table id='transfer_table' class='transfer_table' table border='1'>
-
+?>
+<div class="container">
+  <div>
+  <label id="transfer_table_label" for="transfer_table"> <h4>List of all Transfers between Facilities:<h4> </label>
+  <table id='transfer_table' class='transfer_table'>
+<thead>
 <th>Transfer Number </th>
 <th> Facility (Sender) </th>
 <th> Facility ID (Sender) </th>
@@ -49,8 +48,10 @@ echo "<table id='transfer_table' class='transfer_table' table border='1'>
 <th>Facility (Receiver)</th>
 <th> Facility ID (Receiver) </th>
 <th>Status of Tranfer </th>
-
-";
+</thead>
+<tbody>
+  </div>
+<?php
 
 while($row = mysqli_fetch_array($results)){   //Creates a loop to loop through results
     echo "<tr>
@@ -69,8 +70,13 @@ while($row = mysqli_fetch_array($results)){   //Creates a loop to loop through r
     </tr>";  
 }
 
-echo "</table>"; //Close the table in HTML
 
 mysqli_close($db); //Make sure to close out the database connection
 
 ?>
+</tbody>
+</table>
+</div>
+</body>
+</html>
+

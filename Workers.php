@@ -54,7 +54,7 @@ $results2 = mysqli_query($db, $query_2);
   <div>
   <label id="emp_table_label" for="emplaoyee_table"> <h4>List of all Workers:<h4> </label>
   <table id = 'employee_table' class = 'employee_table'>
-
+<thead>
 <th> First Name </th>
 <th> Last Name </th>
 <th> Employee ID </th>
@@ -62,6 +62,8 @@ $results2 = mysqli_query($db, $query_2);
 <th> Facility ID </th>
 <th> Start Date </th>
 <th> End Date </th>
+</thead>
+<tbody>
   </div>
 
 <?php
@@ -80,14 +82,14 @@ while($row = mysqli_fetch_array($results1)) {
     </tr>";
 }
 ?>
-
+</tbody>
 </table>
 </div>
 <div class="container">
   <div>
   <label id="emp_table_label" for="emplaoyee_table2"> <h4>List of all Managers:<h4> </label>
   <table id = 'employee_table2' class = 'employee_table2'>
-
+  <thead>
  <th> First Name </th>
 <th> Last Name </th>
 <th> Employee ID </th>
@@ -95,6 +97,8 @@ while($row = mysqli_fetch_array($results1)) {
 <th> Managed Facility ID </th>
 <th> Start Date </th>
 <th> End Date </th>
+</thead>
+<tbody>
   </div>
 
   <?php
@@ -118,6 +122,7 @@ mysqli_close($db);
 
 
 ?>
+</tbody>
 </table>
 </div>
 </body>

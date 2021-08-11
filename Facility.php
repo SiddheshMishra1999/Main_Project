@@ -32,9 +32,6 @@
         </div>
   </div>
 
-</body>
-</html>
-
 <?php
 
 include_once 'server.php';
@@ -44,9 +41,12 @@ FROM Facility
 GROUP BY Facility.facility_id, Facility.isactive";
 
 $results = mysqli_query($db, $query_1);
-
-echo "<table id = 'facility_table' class = 'facility_table' table border = '1'>
-
+?>
+<div class="container">
+<div>
+<label id="facility_table_label" for="facility_table"> <h4>List of all Vaccination Facilities:<h4> </label>
+<table id = 'facility_table' class = 'facility_table' >
+<thead>
 <th> Facility ID </th>
 <th> Facility Type </th>
 <th> Faciliy Name </th>
@@ -55,6 +55,14 @@ echo "<table id = 'facility_table' class = 'facility_table' table border = '1'>
 <th> Telephone </th>
 <th> Postal Code </th>
 <th> Active Status </th>
+</thead>
+<tbody>
+</div>
+
+<?php
+echo "<table id = 'facility_table' class = 'facility_table' table border = '1'>
+
+
 ";
 
 while($row = mysqli_fetch_array($results)) {
@@ -78,3 +86,8 @@ mysqli_close($db);
 
 
 ?>
+</tbody>
+</table>
+</div>
+</body>
+</html>
