@@ -1,5 +1,5 @@
 <html>
-<head> 
+<head>
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
@@ -8,7 +8,7 @@
             <a class="logo" href="#">Comp 353 </a>
 
             <nav>
-                <ul class="main-nav"> 
+                <ul class="main-nav">
                     <li><a href="Index.php">Home</a></li>
                     <li ><a href="Person_display.php">Person</a></li>
                     <li><a href="Vaccine.php">Vaccines</a></li>
@@ -18,10 +18,10 @@
 
                 <ul class="side-nav" style="Float=Right">
                     <li><a href="FacilityPage.php">Add a New Facilitly </li>
-                    <li><a href="Delete_facility.php">Delete a Facility </li>
+                    <li><a href="DeleteFacility.php">Delete a Facility </li>
                     <li><a href="Edit_Facility.php">Edit a Facility </li>
                 </ul>
-                
+
             </nav>
         </div>
   </div>
@@ -42,7 +42,7 @@ echo "<table id = 'facility_table' class = 'facility_table' table border = '1'>
 <th> Facility ID </th>
 <th> Facility Type </th>
 <th> Faciliy Name </th>
-<th>  Address </th> 
+<th>  Address </th>
 <th> Webaddress </th>
 <th> Telephone </th>
 <th> Postal Code </th>
@@ -58,7 +58,7 @@ while($row = mysqli_fetch_array($results)) {
     <td> " .$row['webaddress'] ."</td>
     <td> " .$row['telephone'] ."</td>
     <td> " .$row['postal_code'] . "</td>
-    </tr>"; 
+    </tr>";
 }
 
 echo "</table>";
