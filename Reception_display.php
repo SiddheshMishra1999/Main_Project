@@ -11,6 +11,8 @@
                 <ul class="main-nav"> 
                     <li><a href="Facility.php">Facility</a></li>
                     <li class="home"><a href ="#"> > Shipments</a></li>
+                    <li style="Float=Right"><a href ="Reception.php"> > Create a new Shipment</a></li>
+
                 </ul>
                 
             </nav>
