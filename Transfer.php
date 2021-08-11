@@ -14,8 +14,8 @@ include_once 'server.php'
                 <a class="logo" href="Index.php">Comp 353 </a>
                 <nav>
                     <ul class="main-nav">
-                        <li><a href="Reception.php">Transfer</a></li>
-                        <li class="add_shipment"><a href="#"> > Add a new Transfer</a></li>
+                        <li><a href="Transfer_display.php">Transfer</a></li>
+                        <li class="home"><a href="#"> > Add a new Transfer</a></li>
                     </ul>
                 </nav>
             </div>
