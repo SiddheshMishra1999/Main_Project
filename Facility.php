@@ -39,6 +39,9 @@
 
 include_once 'server.php';
 
+$query_1 = "SELECT *
+FROM Facility
+GROUP BY Facility.facility_id, Facility.isactive";
 
 $results = mysqli_query($db, $query_1);
 
@@ -51,6 +54,7 @@ echo "<table id = 'facility_table' class = 'facility_table' table border = '1'>
 <th> Webaddress </th>
 <th> Telephone </th>
 <th> Postal Code </th>
+<th> active status </th>
 ";
 
 while($row = mysqli_fetch_array($results)) {
@@ -63,6 +67,7 @@ while($row = mysqli_fetch_array($results)) {
     <td> " .$row['webaddress'] ."</td>
     <td> " .$row['telephone'] ."</td>
     <td> " .$row['postal_code'] . "</td>
+    <td> " .$row['isactive'] . " </td>
     </tr>";
 }
 
