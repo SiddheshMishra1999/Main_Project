@@ -46,8 +46,6 @@ if($user){
     mysqli_query($db,$query);
     $query2 = "INSERT INTO Postal_code VALUES ('$postal_code','$city','$province')";
     mysqli_query($db,$query2);
-    $query3 = "INSERT INTO Infected VALUES ('$infected','$person_id', '$infected_date', '$variant_type')";
-    mysqli_query($db,$query3);
     // redirect to submitted page
     header("Location: Sumbit.php");
 
