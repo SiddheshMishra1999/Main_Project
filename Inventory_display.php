@@ -25,24 +25,19 @@
 
 include_once 'server.php';
 
-$query_1 = "SELECT Inventory.facility_id, Vaccine.type_name, Inventory.amount
 FROM Inventory, Vaccine
-WHERE (Vaccine.vaccine_id = Inventory.vaccine_id)";
 
-$results = mysqli_query($db, $query_1);
 
-echo "<table id = 'inventory_table' class = 'inventory_table' table border = '1'>
+echo "<table id = 'inventory_table1' class = 'inventory_table1' table border = '1'>
 
 <th> Facility ID </th>
 <th> Vaccine Type </th>
 <th> Amount </th>
 ";
 
-while($row = mysqli_fetch_array($results)) {
 
     echo "<tr>
     <td> " . $row['facility_id'] . "</td>
-    <td> " . $row['type_name'] . "</td>
     <td> " . $row['amount'] . "</td>
     </tr>";
 }
