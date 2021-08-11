@@ -12,7 +12,7 @@ $amount = mysqli_real_escape_string($db, $_POST['amount']);
 
 
 //check db for existing person unique values
-$user_check_query = "SELECT * FROM Facility WHERE shipment_num = '$shipment_num' LIMIT 1";
+$user_check_query = "SELECT * FROM Reception WHERE shipment_num = '$shipment_num' AND facility_id ='$facility_id' LIMIT 1";
 $results = mysqli_query($db, $user_check_query);
 $user = mysqli_fetch_assoc($results);
 
@@ -25,7 +25,7 @@ if($user){
     $query = "INSERT INTO Reception VALUES ('$shipment_num', '$facility_id', '$vaccine_id', '$date_of_reception', '$amount')";
     mysqli_query($db,$query);
     // redirect to submitted page
-    header("Location: Submitfacility.php");
+    header("Location: Submitreception.php");
 
 
   }

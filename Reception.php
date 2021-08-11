@@ -38,7 +38,7 @@ include_once 'server.php'
       <label id="date_of_reception_label" for="date_of_reception">Date of reception: </label>
       <input type="date" name="date_of_reception" id="date_of_reception" required><br><br>
 
-      <label id="amount_label" for="amount">Shipment Number: </label>
+      <label id="amount_label" for="amount">Amount: </label>
       <input type="number" name="amount" id="amount" required><br><br>
 
 
