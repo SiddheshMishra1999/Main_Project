@@ -19,7 +19,7 @@
                 <ul class="side-nav" >
                     <li style="Float=Right"><a href="Person.php">Add a New Person </li>
                     <li style="Float=Right"><a href="DeletePerson.php">Delete a Person </li>
-                    <li style="Float=Right"><a href="EditPerson.php">Edit a Person </li>
+                    <li style="text-align: right"><a href="EditPerson.php">Edit a Person </li>
 
 
 
