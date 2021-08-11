@@ -30,11 +30,11 @@ include_once 'server.php'
         <label id="person_id_label" for="person_id">Person ID: </label>
       <input type="number" name="person_id" id="person_id" required><br><br>
 
-      <label id="dose_num_label" for="dose_num_id">Person ID: </label>
+      <label id="dose_num_label" for="dose_num_id">Dose Number: </label>
       <input type="number" name="dose_num_id" id="dose_num_id" required><br><br>
 
-      <label id="dov_label" for="dov">Date of Vaccination: </label>
-      <input type="date" name="dov" id="dov" required><br><br>
+      <label id="date_received_label" for="date_received">Date of Vaccination: </label>
+      <input type="date" name="date_received" id="date_received" required><br><br>
 
       <label id="facility_id_label" for="facility_id">What is the ID of the location where you were vaccinated?: </label>
       <input type="number" name="facility_id" id="facility_id"  required><br><br>
