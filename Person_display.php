@@ -37,7 +37,6 @@
 
 include_once 'server.php';
 
-$query = "SELECT * FROM Person";
 $query = "SELECT * FROM Person GROUP BY Person.person_id, isActive";
 $results = mysqli_query($db, $query);
 // $user = mysqli_fetch_assoc($results);
