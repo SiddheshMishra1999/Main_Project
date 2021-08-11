@@ -25,8 +25,20 @@
 
 include_once 'server.php';
 
+$query_1 = "SELECT Inventory.facility_id, Vaccine.type_name AS 'Vaccine Type', Inventory.amount
 FROM Inventory, Vaccine
+WHERE (Inventory.vaccine_id = 1) AND (Inventory.vaccine_id = Vaccine.vaccine_id)";
 
+$query_2 = "SELECT Inventory.facility_id, Vaccine.type_name AS 'Vaccine Type', Inventory.amount
+FROM Inventory, Vaccine
+WHERE (Inventory.vaccine_id = 2) AND (Inventory.vaccine_id = Vaccine.vaccine_id)";
+
+$query_3 = "SELECT Inventory.facility_id, Vaccine.type_name AS 'Vaccine Type', Inventory.amount
+FROM Inventory, Vaccine
+WHERE (Inventory.vaccine_id = 3) AND (Inventory.vaccine_id = Vaccine.vaccine_id)";
+
+
+$results1 = mysqli_query($db, $query_1);
 
 echo "<table id = 'inventory_table1' class = 'inventory_table1' table border = '1'>
 
@@ -35,12 +47,52 @@ echo "<table id = 'inventory_table1' class = 'inventory_table1' table border = '
 <th> Amount </th>
 ";
 
+while($row = mysqli_fetch_array($results1)) {
 
     echo "<tr>
     <td> " . $row['facility_id'] . "</td>
+    <td> " . $row['Vaccine Type'] . "</td>
     <td> " . $row['amount'] . "</td>
     </tr>";
 }
+
+$results2 = mysqli_query($db, $query_2);
+
+echo "<table id = 'inventory_table2' class = 'inventory_table2' table border = '1'>
+
+<th> Facility ID </th>
+<th> Vaccine Type </th>
+<th> Amount </th>
+";
+
+while($row = mysqli_fetch_array($results2)) {
+
+    echo "<tr>
+    <td> " . $row['facility_id'] . "</td>
+    <td> " . $row['Vaccine Type'] . "</td>
+    <td> " . $row['amount'] . "</td>
+    </tr>";
+}
+
+$results3 = mysqli_query($db, $query_3);
+
+echo "<table id = 'inventory_table3' class = 'inventory_table3' table border = '1'>
+
+<th> Facility ID </th>
+<th> Vaccine Type </th>
+<th> Amount </th>
+";
+
+while($row = mysqli_fetch_array($results3)) {
+
+    echo "<tr>
+    <td> " . $row['facility_id'] . "</td>
+    <td> " . $row['Vaccine Type'] . "</td>
+    <td> " . $row['amount'] . "</td>
+    </tr>";
+}
+
+
 
 echo "</table>";
 
