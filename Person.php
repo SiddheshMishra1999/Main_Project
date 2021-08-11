@@ -36,7 +36,7 @@ include_once 'server.php'
       <input type="text" name="last_name" id="last_name" required><br><br>
 
       <label id="dob_label" for="dob">Date of Birth: </label>
-      <input type="date" name="dob" id="dob" required><br>
+      <input type="date" name="dob" id="dob" required><br><br>
 
       <label id="telephone_label" for="telephone">Telephone number: </label>
       <input type="tel" name="telephone" id="telephone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="xxx-xxx-xxxx"  required><br><br>
@@ -59,12 +59,14 @@ include_once 'server.php'
           <option value="New Brunswick">New Brunswick</option>
           <option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
           <option value="Nova Scotia">Nova Scotia</option>
+          <option value="Nunavut">Nunavut</option>
           <option value="Ontario">Ontario</option>
           <option value="Prince Edward Island">Prince Edward Island</option>
           <option value="Quebec">Quebec</option>
           <option value="Saskatchewan">Saskatchewan</option>
 
       </select>
+      <br><br>
       <!--<input type="text" name="province" id="province" required><br><br>
       -->
       <label id="email_label" for="email">Email </label>
@@ -83,7 +85,7 @@ include_once 'server.php'
             <option value="Temporary Resident">Temporary Resident</option>
 
         </select>
-      <br>
+      <br><br>
       <label id="infected_label"  for="infected">Are you or have you ever been infected with Covid-19? </label>
         <select name="infected" id="infected" onchange = "checkIfInfected()" required>
             <option value=" " >Choose here</option>
@@ -91,7 +93,7 @@ include_once 'server.php'
             <option value="No">No</option>
 
         </select>
-      <br>
+      <br><br>
 
       <!-- <label id="citizenship_label"  for="citizenship" >Citizenship: </label>
       <input id="citizenship" type="text" name="citizenship" onkeydown = "checkIfCanadian()" size="60" placeholder="Canadian, Permanent Resident, visitor or Temporary resident"required><br><br>
@@ -99,14 +101,14 @@ include_once 'server.php'
 
 
       <label id="medicare_label" for="medicare">Medicare: </label>
-      <input type="text" name="medicare" id="medicare" minlength ="12" maxlength="12" placeholder="abcdef123456"><br>
+      <input type="text" name="medicare" id="medicare" minlength ="12" maxlength="12" placeholder="abcdef123456"><br><br>
 
       <label id="SSN_label" for="SSN">Social Security Number: </label>
       <input type="text" name="SSN" id="SSN" minlength ="9" maxlength="9" pattern="[0-9]{3}[0-9]{3}[0-9]{3}"placeholder="123456789"><br><br>
-<!--
-      <label id="infection_num_label" for="infection_num">How many times have you been infected? </label>
-      <input type="number" name="infection_num" id="infection_num" minlength ="1" maxlength="1" placeholder="1" onkeydown = "checkNum_of_infection()" ><br>
 
+      <label id="infection_date_label" for="infection_date">What date were you infected? </label>
+      <input type="date" name="infection_date" id="infection_date"  ><br><br>
+<!--
       <label id="variant_label" for="variant">What variant have you been infected with? </label>
       <select name="variant" id="variant" >
             <option value=" " >Choose here</option>
@@ -126,10 +128,8 @@ include_once 'server.php'
           document.getElementById("SSN").style.display= 'none';
           document.getElementById("medicare_label").style.display= 'none';
           document.getElementById("SSN_label").style.display= 'none';
-          document.getElementById("infection_num_label").style.display= 'none';
-          document.getElementById("infection_num").style.display= 'none';
-          document.getElementById("variant_lable").style.display= 'none';
-          document.getElementById("variant").style.display= 'none';
+          document.getElementById("infection_date_label").style.display= 'none';
+          document.getElementById("infection_date").style.display= 'none';
 
 
           //show if canadian
@@ -163,26 +163,23 @@ include_once 'server.php'
 
                 }
           }
-          /*// check number of infection
+          // check date of infection
           function checkIfInfected(){
-            if((document.getElementById("infected").value == "Yes"){
-              function checkNum_of_infection() {
-              
+            if(document.getElementById("infected").value == "Yes"){
+              document.getElementById("infection_date_label").style.display= 'block';
+              document.getElementById("infection_date").style.display= 'block';
 
             }else if (document.getElementById("infected").value == "No"){
 
-              document.getElementById("variant_lable").style.display= 'none';
-              document.getElementById("variant").style.display= 'none';
-              document.getElementById("variant").required = false;
+              document.getElementById("infection_date_label").style.display= 'none';
+              document.getElementById("infection_date").style.display= 'none';
             }
             else {
-              document.getElementById("variant_lable").style.display= 'none';
-              document.getElementById("variant").style.display= 'none';
-              document.getElementById("variant").required = false;
-
+              document.getElementById("infection_date_label").style.display= 'none';
+              document.getElementById("infection_date").style.display= 'none';
             }
           }
-          */
+          
 
 
 
