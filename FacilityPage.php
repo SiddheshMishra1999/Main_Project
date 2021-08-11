@@ -14,7 +14,7 @@ include_once 'server.php'
                 <a class="logo" href="Index.php">Comp 353 </a>
                 <nav>
                     <ul class="main-nav">
-                        <li><a href="FacilityPage.php">Facility</a></li>
+                        <li><a href="Facility.php">Facility</a></li>
                         <li class="add_facility"><a href="#"> > Add a New Facility</a></li>
                     </ul>
                 </nav>
