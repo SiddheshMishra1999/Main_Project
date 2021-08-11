@@ -36,7 +36,7 @@ header( "refresh:5 ;url=Facility.php" );
     </div>
     <script>
          var h1 = document.getElementsByTagName("h1");
-            h1[0].innerHTML = " Failed to submit: Facility id does not exist! Redirecting to Facility page in 5 seconds";
+            h1[0].innerHTML = " Failed to submit, Please check your inputs! Redirecting to Facility page in 5 seconds";
 
             var sec         = 5,
             countDiv    = document.getElementById("timer2"),
