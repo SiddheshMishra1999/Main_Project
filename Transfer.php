@@ -41,6 +41,9 @@ include_once 'server.php'
       <label id="reception_date_label" for="reception_date">Date of reception: </label>
       <input type="date" name="reception_date" id="reception_date" required><br><br>
 
+      <label id="count_send_label" for="count_send">Amount: </label>
+      <input type="number" name="count_send" id="count_send" required><br><br>
+
       <label id="facility_to_label" for="facility_to">To Facility ID: </label>
       <input type="number" name="facility_to" id="facility_to" required><br><br>
 

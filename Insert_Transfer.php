@@ -4,12 +4,13 @@ $errors = array();
 
 //Registering Facility
 
-$transfer_num = mysqli_real_escape_string($db, $_POST['shipment_num']);
+$transfer_num = mysqli_real_escape_string($db, $_POST['transfer_num']);
 $facility_id = mysqli_real_escape_string($db, $_POST['facility_id']);
 $vaccine_id = mysqli_real_escape_string($db, $_POST['vaccine_id']);
-$send_date = mysqli_real_escape_string($db, $_POST['date_of_reception']);
-$reception_date = mysqli_real_escape_string($db, $_POST['amount']);
-$facility_to = mysqli_real_escape_string($db, $_POST['amount']);
+$send_date = mysqli_real_escape_string($db, $_POST['send_date']);
+$reception_date = mysqli_real_escape_string($db, $_POST['reception_date']);
+$count_send = mysqli_real_escape_string($db, $_POST['count_send']);
+$facility_to = mysqli_real_escape_string($db, $_POST['facility_to']);
 
 //check db for existing person unique values
 $user_check_query = "SELECT * FROM Transfer WHERE transfer_num = '$transfer_num' LIMIT 1";
@@ -22,7 +23,7 @@ if($user){
 }
   if(count($errors) == 0){
 
-    $query = "INSERT INTO Transfer VALUES ('$transfer_num', '$facility_id', '$vaccine_id', '$send_date', '$reception_date', '$facility_to ')";
+    $query = "INSERT INTO Transfer (transfer_num, facility_id, vaccine_id, send_date, reception_date, count_send, facility_to) VALUES ('$transfer_num', '$facility_id', '$vaccine_id', '$send_date', '$reception_date','$count_send', '$facility_to ')";
     mysqli_query($db,$query);
     // redirect to submitted page
     header("Location: Submittransfer.php");
