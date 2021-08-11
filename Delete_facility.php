@@ -5,7 +5,7 @@ $errors = array();
 //Registering Facility
 
 
-$person_id = mysqli_real_escape_string($db, $_POST['facility_id']);
+$facility_id = mysqli_real_escape_string($db, $_POST['facility_id']);
 
 $user_check_query = "SELECT * FROM Facility WHERE facility_id = '$facility_id' LIMIT 1";
 
@@ -15,7 +15,7 @@ $user = mysqli_fetch_assoc($results);
 if(is_null($user['facility_id'])){array_push($errors, "Facility ID doesn't exist");}
 //Prevents from deleting a person ID that does not exist in the Database.
 if($user){
-  if($user['Facility_id'] != $person_id){array_push($errors, "Facility ID doesn't exist");}
+  if($user['Facility_id'] != $facility_id){array_push($errors, "Facility ID doesn't exist");}
 
 }
 
