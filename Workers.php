@@ -13,7 +13,6 @@
                     <li ><a href="Person_display.php">Person</a></li>
                     <li><a href="Vaccine.php">Vaccines</a></li>
                     <li><a href="Facility.php">Facilities</a></li>
-                    <li class="workers"><a href ="#">Workers</a></li>
                 </ul>
 
             </nav>
@@ -36,7 +35,6 @@ AND (Person.person_id = Worker.person_id)
 AND (Works_at.facility_id = Facility.facility_id)
 AND (Worker.employee_id = Works_at.employee_id)";
 
-$results = mysqli_query($db, $query_1);
 
 echo "<table id = 'employee_table' class = 'employee_table' table border = '1'>
 
@@ -49,7 +47,7 @@ echo "<table id = 'employee_table' class = 'employee_table' table border = '1'>
 <th> End Date </th>
 ";
 
-while($row = mysqli_fetch_array($results)) {
+while($row = mysqli_fetch_array($results1)) {
 
     echo "<tr>
     <td> " . $row['first_name'] . "</td>
