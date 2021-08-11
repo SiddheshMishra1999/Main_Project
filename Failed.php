@@ -36,7 +36,7 @@ header( "refresh:5 ;url=Person_display.php" );
     </div>
     <script>
          var h1 = document.getElementsByTagName("h1");
-            h1[0].innerHTML = " Failed to submit: Person id does not exist! Redirecting to Person page in 5 seconds";
+            h1[0].innerHTML = "Failed to submit, Please check your inputs! Redirecting to Person page in 5 seconds";
 
             var sec         = 5,
             countDiv    = document.getElementById("timer2"),

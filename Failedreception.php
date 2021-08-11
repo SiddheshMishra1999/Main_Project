@@ -36,7 +36,7 @@ header( "refresh:5 ;url=Reception_display.php" );
     </div>
     <script>
          var h1 = document.getElementsByTagName("h1");
-            h1[0].innerHTML = " Failed to submit: Shipment number does not exist! Redirecting to Reception page in 5 seconds";
+            h1[0].innerHTML = " Failed to submit, Please check your inputs! Redirecting to Reception page in 5 seconds";
 
             var sec         = 5,
             countDiv    = document.getElementById("timer2"),
