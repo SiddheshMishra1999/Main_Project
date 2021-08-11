@@ -11,7 +11,7 @@ include_once 'server.php'
 
     <div class="navbar">
             <div class="container">
-                <a class="logo" href="Index.php">Comp 353 </a>
+            <a class="logo" href="Index.php"><img class="logo" width = "60" height="60" src="Beechtown Pediatric Center.png"> </a>
                 <nav>
                     <ul class="main-nav">
                         <li><a href="Reception_display.php">Shipments</a></li>

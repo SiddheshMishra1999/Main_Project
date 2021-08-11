@@ -12,8 +12,7 @@
 <body>
     <div class="navbar">
         <div class="container">
-            <a class="logo" href="#">Comp 353 </a>
-
+        <img class="logo" width = "60" height="60" src="Beechtown Pediatric Center.png">
             <nav>
                 <ul class="main-nav"> 
                     <li class="home"><a href="#">Home</a></li>

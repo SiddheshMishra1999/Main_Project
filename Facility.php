@@ -5,7 +5,7 @@
 <body>
 <div class="navbar">
         <div class="container">
-            <a class="logo" href="Index.php">Comp 353 </a>
+        <a class="logo" href="Index.php"><img class="logo" width = "60" height="60" src="Beechtown Pediatric Center.png"> </a>
 
             <nav>
                 <ul class="main-nav">
@@ -60,10 +60,6 @@ $results = mysqli_query($db, $query_1);
 </div>
 
 <?php
-echo "<table id = 'facility_table' class = 'facility_table' table border = '1'>
-
-
-";
 
 while($row = mysqli_fetch_array($results)) {
 
