@@ -15,7 +15,7 @@ include_once 'server.php'
                 <nav>
                     <ul class="main-nav">
                         <li><a href="Reception.php">Reception</a></li>
-                        <li class="add_shipment"><a href="#"> > Add a new shipment</a></li>
+                        <li class="home"><a href="#"> > Add a new shipment</a></li>
                     </ul>
                 </nav>
             </div>
