@@ -33,7 +33,7 @@ include_once 'server.php'
       <input type="text" name="facility_id" id="facility_id" required><br><br>
 
       <label id="vaccine_id" for="vaccine_id">Vaccine ID: </label>
-      <input type="text" name="vaccine_id" id="vaccine_id" required><br><br>
+      <input type="text" name="vaccine_id" id="vaccine_id" pattern="[1-4]{1}" placeholder="From 1 to 4" required><br><br>
 
       <label id="send_date_label" for="send_date">Send Date: </label>
       <input type="date" name="send_date" id="send_date" required><br><br>
