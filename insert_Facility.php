@@ -14,18 +14,6 @@ $postal_code = mysqli_real_escape_string($db, $_POST['postal_code']);
 $province = mysqli_real_escape_string($db, $_POST['province']);
 $city = mysqli_real_escape_string($db, $_POST['province']);
 
-//check for missing values
-/*
-if(empty($passport_num)) {
-  $passport_num = NULL;
-  }
-  if(empty($medicare)) {
-  $medicare = NULL;
-  }
-  if(empty($SSN)) {
-  $SSN = NULL;
-  }
-*/
 
 //check db for existing person unique values
 $user_check_query = "SELECT * FROM Person WHERE facility_id = '$facility_id' or webaddress = '$webaddress' or name = '$name' or address = '$address' LIMIT 1";
