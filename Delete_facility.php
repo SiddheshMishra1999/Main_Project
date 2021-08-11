@@ -26,7 +26,7 @@ if(count($errors) == 0){
   header("Location: Sumbit.php");
 }
 else{
-  header("Location: Delete_facility.php");
+  header("Location: Failedfacility.php");
 }
 //end deleting Facility
 
