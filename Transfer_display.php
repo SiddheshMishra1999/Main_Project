@@ -11,7 +11,7 @@
                 <ul class="main-nav"> 
                     <li><a href="Facility.php">Facility</a></li>
                     <li class="home"><a href ="#"> > Transfers</a></li>
-                    <li style="Float:Right"><a href ="Transfer.php"> > Create a new Transfer</a></li>
+                    <li style="Float=Right"><a href ="Transfer.php">  Create a new Transfer</a></li>
 
                 </ul>
                 
