@@ -13,6 +13,7 @@
                     <li class="person"><a href="Person_display.php">Person</a></li>
                     <li><a href="Vaccine.php">Vaccines</a></li>
                     <li><a href="Received_display.php">Vaccinations</a></li>
+                    <li><a href='queries.php'> Search Results </a> </li>
 
                     <li><a href="Facility.php">Facilities</a></li>
                     <li><a href="Workers.php">Health Safety Workers</a></li>
