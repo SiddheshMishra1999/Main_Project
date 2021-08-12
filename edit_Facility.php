@@ -40,16 +40,16 @@ if(empty($city)) {
   $city = "SELECT city FROM Facility WHERE facility_id = $facility_id";
 }
 if(empty($address)) {
-  $address = "SELECT address FROM Facility WHERE (facility_id = $facility_id)";
+  $address = "SELECT address FROM Facility WHERE facility_id = $facility_id";
 }
 if(empty($province)) {
-  $province = "SELECT SSN FROM Facility WHERE facility_id = $facility_id";
+  $province = "SELECT province FROM Facility WHERE facility_id = $facility_id";
 }
 
 
 
-$query = "UPDATE Facility SET first_name = '$first_name' WHERE facility_id = '$facility_id'";
-mysqli_query($db,$query);
+// $query = "UPDATE Facility SET type_name = '$type_name' WHERE facility_id = '$facility_id'";
+// mysqli_query($db,$query);
 $query = "UPDATE Facility SET name = '$name' WHERE facility_id = '$facility_id'";
 mysqli_query($db,$query);
 $query = "UPDATE Facility SET type_name = '$type_name' WHERE facility_id = '$facility_id'";
