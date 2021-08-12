@@ -66,8 +66,6 @@ while($row = mysqli_fetch_array($results)){   //Creates a loop to loop through r
     </tr>";  
 }
 
-echo "</table>"; //Close the table in HTML
-
 mysqli_close($db); //Make sure to close out the database connection
 
 ?>

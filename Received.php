@@ -23,9 +23,8 @@ include_once 'server.php'
       <div class="row">
     <div class="column">
 <table id="form_table">
-    <tr>
 
-    <form action="Insert_Reception.php" method="post">
+    <form action="Insert_received.php" method="post">
       <div class="form">
         <h1>Vaccination center</h1>
         <p>Please fill in this form to add a new person being vaccinated.</p>
@@ -48,6 +47,9 @@ include_once 'server.php'
 
       <label id="vaccine_id" for="vaccine_id">What is the ID of the vaccine you received?: </label>
       <input type="text" name="vaccine_id" id="vaccine_id" pattern="[1-4]{1}" placeholder="From 1 to 4" required><br><br>
+
+      <input type="Submit">
+
 
 </table>
 <table id="exists_table">
