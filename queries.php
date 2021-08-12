@@ -36,7 +36,7 @@ AND 60 <= FLOOR(DATEDIFF(CURRENT_DATE,P.dob)/365.25)
 GROUP BY P.person_id";
 
 $query_13 = "SELECT a.person_id, P.first_name, P.last_name, P.dob, P.email, P.telephone, PC.city,
-IF(COUNT(I.infection_date) > 0, 'YES', 'NO') AS infected ,a.date_received, c.type_name, d.type_name
+IF(COUNT(I.infection_date) > 0, 'YES', 'NO') AS infected ,a.date_received, c.type_name AS dose_1, d.type_name AS dose_num_2
 from Person P
 LEFT JOIN Infected AS I on P.person_id = I.person_id
 INNER JOIN Received AS a ON P.person_id = a.person_id
@@ -214,8 +214,8 @@ while($row = mysqli_fetch_array($results13)) {
     <td> " . $row['city'] . "</td>
     <td> " . $row['infected'] . "</td>
     <td> " . $row['date_received'] . "</td>
-    <td> " . $row['type_name'] . "</td>
-    <td> " . $row['type_name'] . "</td>
+    <td> " . $row['dose_1'] . "</td>
+    <td> " . $row['dose_num_2'] . "</td>
     </tr>";
 }
 

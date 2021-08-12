@@ -72,23 +72,19 @@ if($user){
 //Error Check# 4: Age check
 $user_check_query = "SELECT *
 FROM Person,AgeGroup ,Admin, Facility , Postal_code, Received
-WHERE Person.person_id = $person_id AND
-Facility.postal_code = Postal_code.postal_code AND
-Admin.Province = Postal_code.province AND
-Admin.eligible_GroupID >= AgeGroup.GroupID AND
-Received.facility_id = $facility_id AND
-(FLOOR(DATEDIFF($date_received, Person.dob)/365.25) >= min_age) LIMIT 1 )";
+WHERE Person.person_id = '$person_id'
+AND Facility.postal_code = Postal_code.postal_code
+AND Admin.Province = Postal_code.province
+AND Admin.eligible_GroupID >= AgeGroup.GroupID
+AND Received.facility_id = '$facility_id'
+AND FLOOR(DATEDIFF('$date_received', Person.dob)/365.25) >= min_age";
 
 $results = mysqli_query($db, $user_check_query);
 $user = mysqli_fetch_assoc($results);
 if($user){
-  if($user['person_id'] == $person_id){array_push($errors, "Person is in wrong age group");}
+  if($user['person_id'] != $person_id){array_push($errors, "Person is in wrong age group");}
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
 
 
 //Vaccination Process
@@ -97,11 +93,11 @@ if($user){
     $query = "INSERT INTO Received VALUES ('$person_id', '$dose_num ', '$date_received', '$facility_id', '$employee_id','$vaccine_id')";
     mysqli_query($db,$query);
     //Sends to success page
-    header("Location: Sumbit.php");
+    header("Location: Successreceived.php");
   }
   else{
       //Sends to fail page because of one of the errors.
-      header("Location: Failed.php");
+      header("Location: Failedreceived.php");
   }
 
 ?>
