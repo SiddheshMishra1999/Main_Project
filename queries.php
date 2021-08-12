@@ -12,7 +12,6 @@
                     <li><a href="Index.php">Home</a></li>
                     <li ><a href="Person_display.php">Person</a></li>
                     <li><a href="Vaccine.php">Vaccines</a></li>
-                    <li><a href="Received_display.php">Vaccinations</a></li>
                     <li> <a href ="facility.php">Facilities</a></li>
                     <li><a href="Workers.php">Health Safety Workers</a></li>
                     <li><a href="queries.php"><a href ='#'> Queries </a> <li>
@@ -70,7 +69,7 @@ AND (Facility.type_name = Facility_type.name)
 GROUP BY type_name,province
 ORDER BY Province ASC, amount DESC";
 
-$query_16 = "SELECT province,Vaccine.type_name, COUNT(DISTINCT Received.person_id) AS 'Total Number of vaccination'
+$query_16 = "SELECT province,Vaccine.type_name, COUNT(DISTINCT Received.person_id)
 FROM Received, Postal_code, Person, Vaccine , Facility
 WHERE date_received between '2021-01-01' AND '2021-07-22'
 AND (Received.vaccine_id = Vaccine.vaccine_id)
@@ -88,28 +87,28 @@ AND Postal_code.province = 'Quebec'
 GROUP BY city";
 
 $query_18 = "SELECT f.facility_id, f.name, f.address, f.type_name, f.telephone,
-(SELECT COUNT(employee_id)
-FROM Works_at
-WHERE facility_id = f.facility_id
-AND end_date IS NULL
-GROUP BY f.facility_id) AS 'Total workers',
-(SELECT COUNT(shipment_num) FROM Reception
-WHERE facility_id = f.facility_id) AS 'Total shipments',
-(SELECT SUM(amount) FROM Reception
-WHERE facility_id = f.facility_id) AS 'Total Doses received',
-(SELECT COUNT(transfer_num) FROM Transfer
-WHERE facility_id = f.facility_id) AS 'Total amount of transfers',
-(SELECT SUM(count_send) FROM Transfer
-WHERE facility_id = f.facility_id
-AND message ='Transfer completed') AS 'Total Doses transfered',
-(SELECT SUM(count_send) FROM Transfer
-WHERE facility_to = f.facility_id
-AND message ='Transfer completed') AS 'Total Doses received from transfer',
-inv.amount, inv.vaccine_id,
-(SELECT COUNT(DISTINCT person_id) FROM Received
-WHERE facility_id = f.facility_id) AS 'Total people vaccinated',
-(SELECT COUNT(dose_num) FROM Received
-WHERE facility_id = f.facility_id) AS 'Total doses received by people'
+            (SELECT COUNT(employee_id)
+            FROM Works_at
+            WHERE facility_id = f.facility_id
+            AND end_date IS NULL
+            GROUP BY f.facility_id) AS 'Total workers',
+            (SELECT COUNT(shipment_num) FROM Reception
+            WHERE facility_id = f.facility_id) AS 'Total shipments',
+            (SELECT SUM(amount) FROM Reception
+            WHERE facility_id = f.facility_id) AS 'Total Doses received',
+            (SELECT COUNT(transfer_num) FROM Transfer
+            WHERE facility_id = f.facility_id) AS 'Total amount of transfers',
+            (SELECT SUM(count_send) FROM Transfer
+            WHERE facility_id = f.facility_id
+            AND message ='Transfer completed') AS 'Total Doses transfered',
+            (SELECT SUM(count_send) FROM Transfer
+            WHERE facility_to = f.facility_id
+            AND message ='Transfer completed') AS 'Total Doses received from transfer',
+            inv.amount, inv.vaccine_id,
+            (SELECT COUNT(DISTINCT person_id) FROM Received
+            WHERE facility_id = f.facility_id) AS 'Total people vaccinated',
+            (SELECT COUNT(dose_num) FROM Received
+            WHERE facility_id = f.facility_id) AS 'Total doses received by people'
 FROM Facility f
 INNER JOIN Works_at AS wa ON f.facility_id = wa.facility_id
 INNER JOIN Reception AS re ON f.facility_id = re.facility_id
@@ -118,7 +117,7 @@ INNER JOIN Inventory AS inv ON f.facility_id = inv.facility_id
 INNER JOIN Vaccine AS vac ON inv.vaccine_id = vac.vaccine_id
 WHERE pc.city = 'Montreal'
 AND wa.end_date IS NULL
-GROUP BY f.facility_id, vaccine_id";
+GROUP BY f.facility_id, vaccine_id;";
 
 $query_19 = "SELECT Facility.facility_id, Worker.employee_id, Person.SSN, Person.first_name, Person.last_name, Person.dob, Person.medicare, Person.telephone, Person.address, city, province, Person.postal_code, citizenship, email, end_date
 FROM Person, Worker, Postal_code, Works_at, Facility
@@ -185,7 +184,7 @@ $results13 = mysqli_query($db, $query_13);
     <div>
     <label id="Query13_label" for="table13"> <h4>Details of all the people who live in the city of Montréal and who got vaccinated at least two  doses of different types of vaccines<h4> </label>
     <table id = 'table13' class = 'table13' >
-    <thread>
+    <thead>
 
 <th> Person ID </th>
 <th> First Name </th>
@@ -198,7 +197,7 @@ $results13 = mysqli_query($db, $query_13);
 <th> Date received </th>
 <th> Vaccine Type </th>
 <th> Vaccine Type </th>
-</thread>
+</thead>
 </div>
 
 <?php
@@ -254,13 +253,238 @@ while($row = mysqli_fetch_array($results14)) {
     </tr>";
 }
 
-
-mysqli_close($db);
+$results15 = mysqli_query($db, $query_15);
 ?>
-</table> 
+</table>
+
+<div class="container">
+    <div>
+    <label id="Query15_label" for="table15"> <h4>Report of the inventory of vaccines in each province. <h4> </label>
+    <table id = 'table15' class = 'table15' >
+
+<th> Province </th>
+<th> Amount of vaccines </th>
+<th> Vaccine Type </th>
+</div>
+
+<?php
+
+while($row = mysqli_fetch_array($results15)) {
+
+    echo "<tr>
+    <td> " . $row['province'] . "</td>
+    <td> " . $row['amount'] . "</td>
+    <td> " . $row['type_name'] . "</td>
+    </tr>";
+}
+
+$results16 = mysqli_query($db, $query_16);
+?>
+</table>
+
+<div class="container">
+    <div>
+    <label id="Query16_label" for="table16"> <h4> Report of the population’s vaccination by province between January 1st 2021 and July 22nd 2021 <h4> </label>
+    <table id = 'table16' class = 'table16' >
+    <thead>
+<th> Province </th>
+<th> Vaccine Type </th>
+<th> Total Number of Vacicnation </th>
+</thead>
+<tbody>
+</div>
+
+<?php
+
+while($row = mysqli_fetch_array($results16)) {
+
+    echo "<tr>
+    <td> " . $row['province'] . "</td>
+    <td> " . $row['type_name'] . "</td>
+    <td> " . $row['COUNT(DISTINCT Received.person_id)'] . "</td>
+    </tr>";
+}
+
+$results17 = mysqli_query($db, $query_17);
+?>
+</tbody>
+</table>
+</table>
+
+<div class="container">
+    <div>
+    <label id="Query17_label" for="table17" style="color:white;"> <h4> Report by city in Québec the total number of vaccines received in each city between January 1st 2021 and July 22nd 2021 <h4> </label>
+    <table id = 'table17' class = 'table17'>
+    <thead>
+<th> City </th>
+<th> Total Number of Doses Administered </th>
+</thead>
+<tbody>
+</div>
+
+<?php
+
+while($row = mysqli_fetch_array($results17)) {
+
+    echo "<tr>
+    <td> " . $row['city'] . "</td>
+    <td> " . $row['COUNT(dose_num)'] . "</td>
+    </tr>";
+}
+
+$results18 = mysqli_query($db, $query_18)
+?>
+</tbody>
+</table>
+
+<div class="container">
+    <div>
+    <label id="Query18_label" for="table18" style="color:white;"> <h4> Detailed report of all the facilities in the city of Montréal <h4> </label>
+    <table id = 'table18' class = 'table18'>
+    <thead>
+<th> Facility ID </th>
+<th> Name </th>
+<th> Adress </th>
+<th> Facility Type </th>
+<th> Telephone </th>
+<th> Total Workers </th>
+<th> Total Number of Vaccine Shipments Received </th>
+<th> Total Amount of Vaccine Doses Received </th>
+<th> Total Number of Vaccines Transfered   </th>
+<th> Total Amount of Vaccine Doses Transfered </th>
+<th> Total Amount of Vaccine Doses Received from Transfer </th>
+<th> Total Vaccine Dose Number in Inventory </th>
+<th> Vaccine Type </th>
+<th> Total People Vaccinated at Facility</th>
+<th> Total Number of Vaccine Doses Administered to People </th>
+</thead>
+<tbody>
+</div>
+
+<?php
+
+while($row = mysqli_fetch_array($results18)) {
+
+    echo "<tr>
+    <td> " . $row['facility_id'] . "</td>
+    <td> " . $row['name'] . "</td>
+    <td> " . $row['address'] . "</td>
+    <td> " . $row['type_name'] . "</td>
+    <td> " . $row['telephone'] . "</td>
+    <td> " . $row['Total workers'] . "</td>
+    <td> " . $row['Total shipments'] . "</td>
+    <td> " . $row['Total Doses received'] . "</td>
+    <td> " . $row['Total amount of transfers'] . "</td>
+    <td> " . $row['Total Doses transfered'] . "</td>
+    <td> " . $row['Total Doses received from transfer'] . "</td>
+    <td> " . $row['amount'] . "</td>
+    <td> " . $row['vaccine_id'] . "</td>
+    <td> " . $row['Total people vaccinated'] . "</td>
+    <td> " . $row['Total doses received by people'] . "</td>
+    </tr>";
+}
+
+$results19 = mysqli_query($db, $query_19)
+?>
+</tbody>
+</table>
+
+<div class="container">
+    <div>
+    <label id="Query19_label" for="table19" style="color:white;"> <h4>  List of all public health workers in a specific facility <h4> </label>
+    <table id = 'table19' class = 'table19'>
+    <thead>
+<th> Facility ID </th>
+<th> Employee ID </th>
+<th> SSN </th>
+<th> First Name </th>
+<th> Last Name </th>
+<th> Date of Birth </th>
+<th> Medicare </th>
+<th> Telephone </th>
+<th> Address </th>
+<th> City</th>
+<th> Province </th>
+<th> Postal Code </th>
+<th> Citizenship </th>
+<th> Email</th>
+<th> End Date</th>
+</thead>
+<tbody>
+</div>
+
+<?php
+
+while($row = mysqli_fetch_array($results19)) {
+
+    echo "<tr>
+    <td> " . $row['facility_id'] . "</td>
+    <td> " . $row['employee_id'] . "</td>
+    <td> " . $row['SSN'] . "</td>
+    <td> " . $row['first_name'] . "</td>
+    <td> " . $row['last_name'] . "</td>
+    <td> " . $row['dob'] . "</td>
+    <td> " . $row['medicare'] . "</td>
+    <td> " . $row['telephone'] . "</td>
+    <td> " . $row['address'] . "</td>
+    <td> " . $row['city'] . "</td>
+    <td> " . $row['province'] . "</td>
+    <td> " . $row['postal_code'] . "</td>
+    <td> " . $row['citizenship'] . "</td>
+    <td> " . $row['email'] . "</td>
+    <td> " . $row['end_date'] . "</td>
+    </tr>";
+}
+
+$results20 = mysqli_query($db, $query_20)
+?>
+</tbody>
+</table>
+
+<div class="container">
+    <div>
+    <label id="Query20_label" for="table20" style="color:white;"> <h4>List of all public health workers in Québec who never been vaccinated or who have been vaccinated only one dose for Covid-19<h4> </label>
+    <table id = 'table20' class = 'table20'>
+    <thead>
+<th> Emplotee ID </th>
+<th> First Name </th>
+<th> Last Name </th>
+<th> Date of Birth</th>
+<th> Telephone</th>
+<th> City </th>
+<th> Email </th>
+<th> facility_id </th>
+</thead>
+<tbody>
+</div>
+
+<?php
+
+while($row = mysqli_fetch_array($results20)) {
+
+    echo "<tr>
+    <td> " . $row['employee_id'] . "</td>
+    <td> " . $row['first_name'] . "</td>
+    <td> " . $row['last_name'] . "</td>
+    <td> " . $row['dob'] . "</td>
+    <td> " . $row['telephone'] . "</td>
+    <td> " . $row['city'] . "</td>
+    <td> " . $row['email'] . "</td>
+    <td> " . $row['facility_id'] . "</td>
+    </tr>";
+}
+
+mysqli_close($db); 
+?>
+</tbody>
+</table>
 
 
- 
+
+
+
+
+
 </div>
 </div>
 
