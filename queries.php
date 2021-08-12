@@ -47,7 +47,8 @@ INNER JOIN Vaccine AS d ON b.vaccine_id = d.vaccine_id
 where a.dose_num = 1
 and a.dose_num <> b.dose_num
 and a.vaccine_id <> b.vaccine_id
-AND (PC.city = 'Montreal')";
+AND (PC.city = 'Montreal')
+GROUP BY P.person_id";
 
 $query_14 = "SELECT P.first_name, P.last_name, P.dob ,P.email, P.telephone, PC.city, P.person_id
 FROM Received R, Postal_code PC, Infected I, Infected II, Person P
