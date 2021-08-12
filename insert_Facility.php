@@ -13,7 +13,7 @@ $telephone = mysqli_real_escape_string($db, $_POST['telephone']);
 $postal_code = mysqli_real_escape_string($db, $_POST['postal_code']);
 $province = mysqli_real_escape_string($db, $_POST['province']);
 $city = mysqli_real_escape_string($db, $_POST['province']);
-
+$date = date("Y/m/d");
 
 //check db for existing person unique values
 $user_check_query = "SELECT * FROM Facility WHERE facility_id = '$facility_id' or webaddress = '$webaddress' or name = '$name' or address = '$address' LIMIT 1";
@@ -29,15 +29,14 @@ if($user){
 
 }
   if(count($errors) == 0){
-
     $query = "INSERT INTO Facility VALUES ('$facility_id', '$type_name', '$name', '$address', '$webaddress', '$telephone', '$postal_code','TRUE')";
     mysqli_query($db,$query);
     $query2 = "INSERT INTO Postal_code VALUES ('$postal_code','$city','$province')";
     mysqli_query($db,$query2);
+    $query = "INSERT INTO Reception VALUES (0,'$facility_id',1,null,0)";
+    mysqli_query($db,$query2);
     // redirect to submitted page
     header("Location: Submitfacility.php");
-
-
   }
   else{
       header("Location: Failedfacility.php");

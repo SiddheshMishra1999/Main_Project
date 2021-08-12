@@ -12,6 +12,8 @@
                     <li><a href="Index.php">Home</a></li>
                     <li class="person"><a href="Person_display.php">Person</a></li>
                     <li><a href="Vaccine.php">Vaccines</a></li>
+                    <li><a href="Received_display.php">Vaccinations</a></li>
+
                     <li><a href="Facility.php">Facilities</a></li>
                     <li><a href="Workers.php">Health Safety Workers</a></li>
                 </ul>
@@ -29,8 +31,6 @@
         </div>
   </div>
 
-</body>
-</html>
 
 
 <?php
@@ -40,9 +40,12 @@ include_once 'server.php';
 $query = "SELECT * FROM Person GROUP BY Person.person_id, isActive";
 $results = mysqli_query($db, $query);
 // $user = mysqli_fetch_assoc($results);
-
-echo "<table id='person_table' class='person_table' table border='1'>
-
+?>
+<div class="container">
+  <div>
+  <label id="Person_table_label" for="Person_table"> <h4>List of People in the Database:<h4> </label>
+  <table id='person_table' class='person_table'>
+<thead>
 <th>Person ID </th>
 <th>SSN </th>
 <th>Passport Number</th>
@@ -56,8 +59,12 @@ echo "<table id='person_table' class='person_table' table border='1'>
 <th>Citizenship </th>
 <th>Postal Code </th>
 <th> Active Status </th>
+</thead>
+<tbody>
+  </div>
 
-";
+<?php
+
 
 while($row = mysqli_fetch_array($results)){   //Creates a loop to loop through results
     echo "<tr>
@@ -77,8 +84,15 @@ while($row = mysqli_fetch_array($results)){   //Creates a loop to loop through r
     </tr>";  
 }
 
-echo "</table>"; //Close the table in HTML
 
 mysqli_close($db); //Make sure to close out the database connection
 
 ?>
+</tbody>
+</table>
+</div>
+</body>
+</html>
+
+
+

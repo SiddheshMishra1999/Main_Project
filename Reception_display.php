@@ -5,7 +5,7 @@
 <body>
 <div class="navbar">
         <div class="container">
-        <a class="logo" href="Index.php"><img class="logo" width = "60" height="60" src="Beechtown Pediatric Center.png"> </a>
+            <a class="logo" href="Index.php">Comp 353 </a>
 
             <nav>
                 <ul class="main-nav"> 
@@ -37,7 +37,13 @@ $results = mysqli_query($db, $query);
   <label id="reception_table_label" for="reception_table"> <h4>List of all shipments:<h4> </label>
   <table id='reception_table' class='reception_table'>
 <thead>
-
+<th>Shipment Number </th>
+<th> Facility Name </th>
+<th> Facility ID (Sender) </th>
+<th>Vaccine Name </th>
+<th>Vaccine ID </th>
+<th>Date of Reception </th>
+<th>Amount of Vaccines Received  </th>
 </thead>
 <tbody>
   </div>
@@ -55,9 +61,10 @@ while($row = mysqli_fetch_array($results)){   //Creates a loop to loop through r
     <td>" . $row['amount'] ."</td>
 
 
+
+
     </tr>";  
 }
-
 
 mysqli_close($db); //Make sure to close out the database connection
 

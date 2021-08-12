@@ -67,7 +67,7 @@ $results2 = mysqli_query($db, $query_2);
 </div>
 <div class="container">
   <div>
-  <label id="Madorna_inventory_label" for="inventory_table2"> <h4>Inventory of vaccine type Madorna:<h4> </label>
+  <label id="Madorna_inventory_label" for="inventory_table2"> <h4>Inventory of vaccine type Moderna:<h4> </label>
   <table id = 'inventory_table2' class = 'inventory_table2' >
 <thead>
 <th> Facility ID </th>
