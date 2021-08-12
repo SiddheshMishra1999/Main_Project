@@ -327,7 +327,7 @@ $results17 = mysqli_query($db, $query_17);
 
 <div class="container">
     <div>
-    <label id="Query17_label" for="table17" style="color:white;"> <h4> Report by city in Québec the total number of vaccines received in each city between January 1st 2021 and July 22nd 2021 <h4> </label>
+    <label id="Query17_label" for="table17" style="color:black;"> <h4> Report by city in Québec the total number of vaccines received in each city between January 1st 2021 and July 22nd 2021 <h4> </label>
     <table id = 'table17' class = 'table17'>
     <thead>
 <th> City </th>
@@ -353,7 +353,7 @@ $results18 = mysqli_query($db, $query_18)
 
 <div class="container">
     <div>
-    <label id="Query18_label" for="table18" style="color:white;"> <h4> Detailed report of all the facilities in the city of Montréal <h4> </label>
+    <label id="Query18_label" for="table18" style="color:black;"> <h4> Detailed report of all the facilities in the city of Montréal <h4> </label>
     <table id = 'table18' class = 'table18'>
     <thead>
 <th> Facility ID </th>

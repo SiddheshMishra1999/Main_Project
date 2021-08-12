@@ -15,24 +15,27 @@ include_once 'server.php';
     <title>Document</title>
 </head>
 <body>
-    <div class="navbar">
+<div class="navbar">
         <div class="container">
         <a class="logo" href="Index.php"><img class="logo" width = "60" height="60" src="Beechtown Pediatric Center.png"> </a>
 
             <nav>
-                <ul class="main-nav"> 
-                    <li ><a href="Index.php">Home</a></li>
-                    <li><a href="Person_display.php"]>Person</a></li>
-                    <li><a href="Vaccine.php">Vaccines</a></li>
-                    <li><a href="Facility.php">Facilities</a></li>
-                    <li><a href='queries.php'> Search Results </a> </li>
-                    <li><a href='queries.php'> Search Results </a> </li>
+            <ul >
+                    <li class="left-menu-items"><a href="Index.php">Home</a></li>
+                    <li class="left-menu-items"><a href="Person_display.php">Person</a></li>
+                    <li class="left-menu-items"><a href="Vaccine.php">Vaccines</a></li>
+                    <li class="left-menu-items"><a href="Received_display.php">Vaccinations</a></li>
+                    <li  class="left-menu-items" ><a href="Facility.php">Facilities</a></li>
+                    <li class="left-menu-items" ><a href="Workers.php">Health Safety Workers</a></li>
+                    <li class="left-menu-items"><a href='queries.php'> Search Results </a> </li>
+
+ 
                 </ul>
+
                 
             </nav>
         </div>
-    </div>
-
+  </div>
     <div class="timer">
           <h1> </h1> 
     </div>
