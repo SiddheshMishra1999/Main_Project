@@ -255,9 +255,9 @@ while($row = mysqli_fetch_array($results14)) {
 }
 
 
-</table> 
 mysqli_close($db);
 ?>
+</table> 
 
 
  
