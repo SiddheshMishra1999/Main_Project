@@ -27,6 +27,7 @@ header( "refresh:5 ;url=Received.php" );
                     <li><a href="Vaccine.php">Vaccines</a></li>
                     <li><a href="Facility.php">Facilities</a></li>
                     <li><a href='queries.php'> Search Results </a> </li>
+                    <li><a href='queries.php'> Search Results </a> </li>
                 </ul>
 
             </nav>

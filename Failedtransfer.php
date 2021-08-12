@@ -27,6 +27,7 @@ header( "refresh:5 ;url=Transfer_display.php" );
                     <li><a href="Vaccine.php">Vaccines</a></li>
                     <li><a href="Received_display.php">Vaccinations</a></li>
                     <li><a href="Workers.php">Health Safety Workers</a></li>
+                    
                 </ul>
 
             </nav>
