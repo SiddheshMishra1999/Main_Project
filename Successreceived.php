@@ -1,8 +1,8 @@
-<?php 
+<?php
 
 include_once 'server.php';
 
-    header( "refresh:5 ;url=Receiption.php" );
+    header( "refresh:5 ;url=Received_display.php" );
 ?>
 
 <!DOCTYPE html>
@@ -29,42 +29,42 @@ include_once 'server.php';
                     <li class="left-menu-items" ><a href="Workers.php">Health Safety Workers</a></li>
                     <li class="left-menu-items"><a href='queries.php'> Search Results </a> </li>
 
- 
+
                 </ul>
 
-                
+
             </nav>
         </div>
   </div>
     <div class="timer">
-          <h1> </h1> 
+          <h1> </h1>
     </div>
     <script>
          var h1 = document.getElementsByTagName("h1");
-            h1[0].innerHTML = " Thank you for Submitting! Redirecting to Vaccine Reception in 5 seconds";
+            h1[0].innerHTML = " Thank you for Submitting! Redirecting to Vacciination page in 5 seconds";
 
             var sec         = 5,
             countDiv    = document.getElementById("timer"),
             secpass,
             countDown   = setInterval(function () {
                 'use strict';
-                
+
                 secpass();
             }, 1000);
 
             function secpass() {
             'use strict';
-            
+
             if (sec > 0) {
-                
+
                 sec = sec - 1;
-                
+
             } else {
-                
+
                 clearInterval(countDown);
-                
+
                 countDiv.innerHTML = 'countdown done';
-                
+
             }
         }
 
