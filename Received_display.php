@@ -20,6 +20,7 @@
 
                 <ul class="side-nav" >
                     <li style="Float=Right"><a href="Received.php">Vaccinate someone </li>
+                    <li ><a href="Admin.php"> Change Eligible Age Groups</a></li>
 
 
                 </ul>

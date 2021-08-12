@@ -20,13 +20,7 @@
                     <li class="left-menu-items"><a href="DeleteFacility.php">Delete a Facility</a> </li>
                     <li class="left-menu-items"><a href="EditFacility.php">Edit a Facility </a></li>
                 </ul>
-                
-               <!-- class="side-nav" style="float=right"
-                <ul>
-                    <li><a href="FacilityPage.php">Add a New Facilitly </a></li>
-                    <li><a href="DeleteFacility.php">Delete a Facility</a> </li>
-                    <li><a href="EditFacility.php">Edit a Facility </a></li>
-                </ul> -->
+
             </nav>
                 <ul class="right-menu-items">
                     <li class="my-sidenav-link"><a href="Transfer_display.php">Transfers </a></li>
