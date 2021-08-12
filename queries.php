@@ -141,12 +141,12 @@ HAVING COUNT(Received.dose_num)<=1
 ORDER BY Worker.employee_id ASC";
 
 
-$results12 = mysqli_query($db, $query_2);
+$results12 = mysqli_query($db, $query_12);
 ?>
 <div class="container">
-<div>
-<label id="Pfizer_inventory_label" for="inventory_table1"> <h4>Inventory of vaccine type Pfizer:<h4> </label>
-<table id = 'inventory_table1' class = 'inventory_table1' >
+    <div>
+    <label id="Query12_label" for="table12"> <h4>Details of all the people who got vaccinated only one dose and are of group ages 1 to 3 <h4> </label>
+    <table id = 'table12' class = 'table12' >
 
 <th> First Name </th>
 <th> Last Name </th>
@@ -162,202 +162,105 @@ $results12 = mysqli_query($db, $query_2);
 
 <?php
 
-while($row = mysqli_fetch_array($results1)) {
+while($row = mysqli_fetch_array($results12)) {
 
     echo "<tr>
-    <td> " . $row['facility_id'] . "</td>
-    <td> " . $row['Vaccine Type'] . "</td>
-    <td> " . $row['amount'] . "</td>
+    <td> " . $row['first_name'] . "</td>
+    <td> " . $row['last_name'] . "</td>
+    <td> " . $row['dob'] . "</td>
+    <td> " . $row['email'] . "</td>
+    <td> " . $row['telephone'] . "</td>
+    <td> " . $row['city'] . "</td>
+    <td> " . $row['date_received'] . "</td>
+    <td> " . $row['vaccine_id'] . "</td>
+    <td> " . $row['infected'] . "</td>
+    <td> " . $row['Number_of_infection'] . "</td>
     </tr>";
 }
 
-$results13 = mysqli_query($db, $query_2);
-?>
-
-</table>
-</div>
-<div class="container">
-  <div>
-  <label id="Madorna_inventory_label" for="inventory_table2"> <h4>Inventory of vaccine type Madorna:<h4> </label>
-  <table id = 'inventory_table2' class = 'inventory_table2' >
-
-<th> Facility ID </th>
-<th> Vaccine Type </th>
-<th> Amount </th>
-  </div>
-  <?php
-
-
-while($row = mysqli_fetch_array($results2)) {
-
-    echo "<tr>
-    <td> " . $row['facility_id'] . "</td>
-    <td> " . $row['Vaccine Type'] . "</td>
-    <td> " . $row['amount'] . "</td>
-    </tr>";
-}
-
-$results14 = mysqli_query($db, $query_3);
+$results13 = mysqli_query($db, $query_13);
 ?>
 </table>
-</div>
 <div class="container">
- <div>
- <label id="Astra_inventory_label" for="inventory_table3"> <h4>Inventory of vaccine type Astra Zeneca:<h4> </label>
- <table id = 'inventory_table3' class = 'inventory_table3'>
-<th> Facility ID </th>
-<th> Vaccine Type </th>
-<th> Amount </th>
+    <div>
+    <label id="Query13_label" for="table13"> <h4>Details of all the people who live in the city of Montréal and who got vaccinated at least two  doses of different types of vaccines<h4> </label>
+    <table id = 'table13' class = 'table13' >
+    <thread>
 
- </div>
+<th> Person ID </th>
+<th> First Name </th>
+<th> Last Name </th>
+<th> Date of Person </th>
+<th> Email </th>
+<th> Telephone </th>
+<th> City </th>
+<th> Infected </th>
+<th> Date received </th>
+<th> Vaccine Type </th>
+<th> Vaccine Type </th>
+</thread>
+</div>
+
 <?php
- 
 
-while($row = mysqli_fetch_array($results3)) {
+while($row = mysqli_fetch_array($results13)) {
 
     echo "<tr>
-    <td> " . $row['facility_id'] . "</td>
-    <td> " . $row['Vaccine Type'] . "</td>
-    <td> " . $row['amount'] . "</td>
+    <td> " . $row['person_id'] . "</td>
+    <td> " . $row['first_name'] . "</td>
+    <td> " . $row['last_name'] . "</td>
+    <td> " . $row['dob'] . "</td>
+    <td> " . $row['email'] . "</td>
+    <td> " . $row['telephone'] . "</td>
+    <td> " . $row['city'] . "</td>
+    <td> " . $row['infected'] . "</td>
+    <td> " . $row['date_received'] . "</td>
+    <td> " . $row['type_name'] . "</td>
+    <td> " . $row['type_name'] . "</td>
     </tr>";
 }
 
-$results13 = mysqli_query($db, $query_2);
+$results14 = mysqli_query($db, $query_14);
+
+
 ?>
-
 </table>
-</div>
 <div class="container">
-  <div>
-  <label id="Madorna_inventory_label" for="inventory_table2"> <h4>Inventory of vaccine type Madorna:<h4> </label>
-  <table id = 'inventory_table2' class = 'inventory_table2' >
+    <div>
+    <label id="Queries14_label" for="table14"> <h4>Inventory of vaccine type Pfizer22342342:<h4> </label>
+    <table id = 'table14' class = 'table14' >
 
-<th> Facility ID </th>
-<th> Vaccine Type </th>
-<th> Amount </th>
-  </div>
-  <?php
+<th> First Name </th>
+<th> Last Name </th>
+<th> Date of Birth </th>
+<th> Email </th>
+<th> Telephone </th>
+<th> City </th>
+<th> Person ID </th>
+</div>
 
+<?php
 
-while($row = mysqli_fetch_array($results2)) {
+while($row = mysqli_fetch_array($results14)) {
 
     echo "<tr>
-    <td> " . $row['facility_id'] . "</td>
-    <td> " . $row['Vaccine Type'] . "</td>
-    <td> " . $row['amount'] . "</td>
-    </tr>";
-}
-
-$results13 = mysqli_query($db, $query_2);
-?>
-
-</table>
-</div>
-<div class="container">
-  <div>
-  <label id="Madorna_inventory_label" for="inventory_table2"> <h4>Inventory of vaccine type Madorna:<h4> </label>
-  <table id = 'inventory_table2' class = 'inventory_table2' >
-
-<th> Facility ID </th>
-<th> Vaccine Type </th>
-<th> Amount </th>
-  </div>
-  <?php
-
-
-while($row = mysqli_fetch_array($results2)) {
-
-    echo "<tr>
-    <td> " . $row['facility_id'] . "</td>
-    <td> " . $row['Vaccine Type'] . "</td>
-    <td> " . $row['amount'] . "</td>
-    </tr>";
-}
-
-$results13 = mysqli_query($db, $query_2);
-?>
-
-</table>
-</div>
-<div class="container">
-  <div>
-  <label id="Madorna_inventory_label" for="inventory_table2"> <h4>Inventory of vaccine type Madorna:<h4> </label>
-  <table id = 'inventory_table2' class = 'inventory_table2' >
-
-<th> Facility ID </th>
-<th> Vaccine Type </th>
-<th> Amount </th>
-  </div>
-  <?php
-
-
-while($row = mysqli_fetch_array($results2)) {
-
-    echo "<tr>
-    <td> " . $row['facility_id'] . "</td>
-    <td> " . $row['Vaccine Type'] . "</td>
-    <td> " . $row['amount'] . "</td>
-    </tr>";
-}
-
-$results13 = mysqli_query($db, $query_2);
-?>
-
-</table>
-</div>
-<div class="container">
-  <div>
-  <label id="Madorna_inventory_label" for="inventory_table2"> <h4>Inventory of vaccine type Madorna:<h4> </label>
-  <table id = 'inventory_table2' class = 'inventory_table2' >
-
-<th> Facility ID </th>
-<th> Vaccine Type </th>
-<th> Amount </th>
-  </div>
-  <?php
-
-
-while($row = mysqli_fetch_array($results2)) {
-
-    echo "<tr>
-    <td> " . $row['facility_id'] . "</td>
-    <td> " . $row['Vaccine Type'] . "</td>
-    <td> " . $row['amount'] . "</td>
-    </tr>";
-}
-
-$results13 = mysqli_query($db, $query_2);
-?>
-
-</table>
-</div>
-<div class="container">
-  <div>
-  <label id="Madorna_inventory_label" for="inventory_table2"> <h4>Inventory of vaccine type Madorna:<h4> </label>
-  <table id = 'inventory_table2' class = 'inventory_table2' >
-
-<th> Facility ID </th>
-<th> Vaccine Type </th>
-<th> Amount </th>
-  </div>
-  <?php
-
-
-while($row = mysqli_fetch_array($results2)) {
-
-    echo "<tr>
-    <td> " . $row['facility_id'] . "</td>
-    <td> " . $row['Vaccine Type'] . "</td>
-    <td> " . $row['amount'] . "</td>
+    <td> " . $row['first_name'] . "</td>
+    <td> " . $row['last_name'] . "</td>
+    <td> " . $row['dob'] . "</td>
+    <td> " . $row['email'] . "</td>
+    <td> " . $row['telephone'] . "</td>
+    <td> " . $row['city'] . "</td>
+    <td> " . $row['person_id'] . "</td>
     </tr>";
 }
 
 
+</table> 
 mysqli_close($db);
 ?>
 
 
-</table>  
+ 
 </div>
 </div>
 
