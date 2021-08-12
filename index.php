@@ -29,35 +29,17 @@
     </div>
     <section class="hero">
         <div class="container">
-            <p class="first-p">This is a non-profit site build for a project</p>
-            <h1>Vaccination &amp; Much more!   </h1>
+        <br><h1 style ="text-align:center;">Vaccination &amp; Much more!   </h1> <br>
+          <br>  <h3 class="first-p">This is a non-profit site build for a project</h3><br>
+
 
         </div>
     </section>
-    <section class="comment">
-
-        <div class="comment">
-            <h2> Comments </h2>
-            <form action="">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name">
-
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email">
-
-                <label for="message">Message</label>
-                <textarea type="message" id="message" name="message">
-
-
-                
-            </form>
-        </div>
-    </section>
+    
     <footer>
         <ul class="sub-nav">
-            <li class="current"><a href="#">Contact</a></li>
             <li ><a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/question-and-answers-hub/q-a-detail/coronavirus-disease-covid-19#:~:text=symptoms">More information</a></li>
-            <li ><a href="#">Creators</a></li>
+
         </ul>
       </footer>
 </body>

@@ -30,6 +30,8 @@ body{
 
  .container{
     display: flex;
+    text-align: center;
+    break-inside: auto;
 }
 .Delete_person{
     display: flex;
