@@ -33,8 +33,8 @@ include_once 'server.php'
         <label id="person_id_label" for="person_id">Person ID: </label>
       <input type="number" name="person_id" id="person_id" required><br><br>
 
-      <label id="dose_num_label" for="dose_num_id">Dose Number: </label>
-      <input type="number" name="dose_num_id" id="dose_num_id" pattern="[1-2]{1}" placeholder =" 1 or 2" required><br><br>
+     <!-- <label id="dose_num_label" for="dose_num_id">Dose Number: </label>
+      <input type="number" name="dose_num_id" id="dose_num_id" pattern="[1-2]{1}" placeholder =" 1 or 2" required><br><br> -->
 
       <label id="date_received_label" for="date_received">Date of Vaccination: </label>
       <input type="date" name="date_received" id="date_received" required><br><br>
