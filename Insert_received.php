@@ -70,20 +70,20 @@ if($user){
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
 //Error Check# 4: Age check
-$user_check_query = "SELECT *
-FROM Person,AgeGroup ,Admin, Facility , Postal_code, Received
-WHERE Person.person_id = $person_id AND
-Facility.postal_code = Postal_code.postal_code AND
-Admin.Province = Postal_code.province AND
-Admin.eligible_GroupID >= AgeGroup.GroupID AND
-Received.facility_id = $facility_id AND
-(FLOOR(DATEDIFF($date_received, Person.dob)/365.25) >= min_age) LIMIT 1 )";
+// $user_check_query = "SELECT *
+// FROM Person,AgeGroup ,Admin, Facility , Postal_code, Received
+// WHERE Person.person_id = $person_id AND
+// Facility.postal_code = Postal_code.postal_code AND
+// Admin.Province = Postal_code.province AND
+// Admin.eligible_GroupID >= AgeGroup.GroupID AND
+// Received.facility_id = $facility_id AND
+// (FLOOR(DATEDIFF($date_received, Person.dob)/365.25) >= min_age) LIMIT 1 )";
 
-$results = mysqli_query($db, $user_check_query);
-$user = mysqli_fetch_assoc($results);
-if($user){
-  if($user['person_id'] == $person_id){array_push($errors, "Person is in wrong age group");}
-}
+// $results = mysqli_query($db, $user_check_query);
+// $user = mysqli_fetch_assoc($results);
+// if($user){
+//   if($user['person_id'] == $person_id){array_push($errors, "Person is in wrong age group");}
+// }
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
 
