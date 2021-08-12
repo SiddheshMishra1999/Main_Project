@@ -41,7 +41,7 @@ include_once 'server.php';
     </div>
     <script>
          var h1 = document.getElementsByTagName("h1");
-            h1[0].innerHTML = " Thank you for Submitting! Redirecting to Vacciination page in 5 seconds";
+            h1[0].innerHTML = " Thank you for Submitting! Redirecting to Vaccination page in 5 seconds";
 
             var sec         = 5,
             countDiv    = document.getElementById("timer"),
