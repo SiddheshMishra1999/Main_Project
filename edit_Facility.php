@@ -27,7 +27,7 @@ if(empty($name)) {
   $name = "SELECT name FROM Facility WHERE facility_id = $facility_id";
 }
 if(empty($webaddress)) {
-  $webaddress = "SELECT dob_name FROM Facility WHERE facility_id = $facility_id";
+  $webaddress = "SELECT webaddress FROM Facility WHERE facility_id = $facility_id";
 }
 if(empty($telephone)) {
   $telephone = "SELECT telephone FROM Facility WHERE facility_id = $facility_id";
