@@ -40,7 +40,7 @@ if(empty($city)) {
   $city = "SELECT city FROM Facility WHERE facility_id = $facility_id";
 }
 if(empty($address)) {
-  $address = "SELECT address FROM Facility WHERE facility_id = $facility_id";
+  $address = "SELECT address FROM Facility WHERE (facility_id = $facility_id)";
 }
 if(empty($province)) {
   $province = "SELECT SSN FROM Facility WHERE facility_id = $facility_id";
