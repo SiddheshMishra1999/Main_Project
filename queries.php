@@ -236,7 +236,7 @@ $results14 = mysqli_query($db, $query_14);
 </table>
 <div class="container">
     <div>
-    <label id="Queries14_label" for="table14"> <h4>Inventory of vaccine type Pfizer22342342:<h4> </label>
+    <label id="Queries14_label" for="table14"> <h4>Details of all the people who got vaccinated and have been infected with at least two different variants of Covid-19<h4> </label>
     <table id = 'table14' class = 'table14' >
     <thead>
 
