@@ -5,6 +5,11 @@ body{
     background-color: #cccccc;
 
 }
+.home{
+    background-color: orange;
+
+
+}
 .navbar{
     background: white;
     padding: 1em;
@@ -50,11 +55,7 @@ ul{
 
 }
 
-.home{
-    background-color: orange;
 
-
-}
 .person{
     background-color: orange;
 

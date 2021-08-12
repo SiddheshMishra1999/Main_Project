@@ -10,23 +10,28 @@
 
 </head>
 <body>
-    <div class="navbar">
+<div class="navbar">
         <div class="container">
-        <img class="logo" width = "60" height="60" src="Beechtown Pediatric Center.png">
+        <a class="logo" href="Index.php"><img class="logo" width = "60" height="60" src="Beechtown Pediatric Center.png"> </a>
+
             <nav>
-                <ul class="main-nav"> 
-                    <li class="home"><a href="#">Home</a></li>
-                    <li><a href="Person_display.php">Person</a></li>
-                    <li><a href="Vaccine.php">Vaccines</a></li>
-                    <li><a href="Received_display.php">Vaccinations</a></li>
-                    <li><a href="Facility.php">Facilities</a></li>
-                    <li><a href="Workers.php">Health Safety Workers</a></li>
-                    <li><a href='queries.php'> Search Results </a> </li>
+                <ul >
+                    <li class="home" class="left-menu-items"><a href="Index.php">Home</a></li>
+                    <li class="left-menu-items"><a href="Person_display.php">Person</a></li>
+                    <li class="left-menu-items"><a href="Vaccine.php">Vaccines</a></li>
+                    <li class="left-menu-items"><a href="Received_display.php">Vaccinations</a></li>
+                    <li class="left-menu-items"><a href='queries.php'> Search Results </a> </li>
+                    <li  class="left-menu-items" ><a href="#">Facilities</a></li>
+                    <li class="left-menu-items" ><a href="Workers.php">Health Safety Workers</a></li>
+
                 </ul>
-                
+
             </nav>
+
+
         </div>
-    </div>
+  </div>
+v>
     <section class="hero">
         <div class="container">
         <br><h1 style ="text-align:center;">Vaccination &amp; Much more!   </h1> <br>
