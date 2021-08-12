@@ -8,28 +8,31 @@
         <a class="logo" href="Index.php"><img class="logo" width = "60" height="60" src="Beechtown Pediatric Center.png"> </a>
 
             <nav>
-                <ul class="main-nav">
-                    <li><a href="Index.php">Home</a></li>
-                    <li ><a href="Person_display.php">Person</a></li>
-                    <li><a href="Vaccine.php">Vaccines</a></li>
-                    <li><a href="Received_display.php">Vaccinations</a></li>
-                    <li class="facility"><a href="#">Facilities</a></li>
-                    <li><a href="Workers.php">Health Safety Workers</a></li>
+                <ul >
+                    <li class="left-menu-items"><a href="Index.php">Home</a></li>
+                    <li class="left-menu-items"><a href="Person_display.php">Person</a></li>
+                    <li class="left-menu-items"><a href="Vaccine.php">Vaccines</a></li>
+                    <li class="left-menu-items"><a href="Received_display.php">Vaccinations</a></li>
+                    <li class="home" class="left-menu-items" ><a href="#">Facilities</a></li>
+                    <li class="left-menu-items" ><a href="Workers.php">Health Safety Workers</a></li>
+                    <li class="left-menu-items"><a href="FacilityPage.php">Add a New Facilitly </a></li>
+                    <li class="left-menu-items"><a href="DeleteFacility.php">Delete a Facility</a> </li>
+                    <li class="left-menu-items"><a href="EditFacility.php">Edit a Facility </a></li>
                 </ul>
-
-                <ul class="side-nav" style="Float=Right">
-                    <li><a href="FacilityPage.php">Add a New Facilitly </li>
-                    <li><a href="DeleteFacility.php">Delete a Facility </li>
-                    <li><a href="EditFacility.php">Edit a Facility </li>
-                </ul>
-
-                <ul class="side-side-nav" >
-                    <li style="Float=Right"><a href="Transfer_display.php">Transfers </li>
-                    <li style="Float=Right"><a href="Reception_display.php">Shipments </li>
-                    <li style="Float=Right"><a href="Inventory_display.php">Inventory  </li>
-                </ul>
-
+                
+               <!-- class="side-nav" style="float=right"
+                <ul>
+                    <li><a href="FacilityPage.php">Add a New Facilitly </a></li>
+                    <li><a href="DeleteFacility.php">Delete a Facility</a> </li>
+                    <li><a href="EditFacility.php">Edit a Facility </a></li>
+                </ul> -->
             </nav>
+                <ul class="right-menu-items">
+                    <li class="my-sidenav-link"><a href="Transfer_display.php">Transfers </a></li>
+                    <li  class="my-sidenav-link"><a href="Reception_display.php">Shipments </a></li>
+                    <li  class="my-sidenav-link"><a href="Inventory_display.php">Inventory  </a></li>
+                </ul>
+
         </div>
   </div>
 

@@ -10,6 +10,15 @@ body{
     padding: 1em;
     text-align: center;
 }
+.left-menu-items
+ { float: left; }
+
+.right-menu-items
+{ 
+  list-style:none;
+  margin:10px;
+  float: right; 
+}
 
 
 .logo{
@@ -86,8 +95,20 @@ ul{
 
     background-color: orange;
 }
-li{
-    float: left;
+.my-sidenav
+{
+list-style-type: none;
+padding: 0;
+margin: 0;
+text-align: right;
+}
+
+.my-sidenav-link
+{
+background-image: url(arrow.gif);
+background-repeat: no-repeat;
+background-position: 100% .4em;
+padding-right: .6em;
 }
 li a{
     list-style-type: none;
