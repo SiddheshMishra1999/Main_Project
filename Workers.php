@@ -15,6 +15,7 @@
                     <li><a href="Received_display.php">Vaccinations</a></li>
                     <li><a href="Facility.php">Facilities</a></li>
                     <li class="workers"><a href ="#">Health Safety Worker</a></li>
+                    <li><a href='queries.php'> Search Results </a> </li>
                 </ul>
 
             </nav>
