@@ -26,6 +26,8 @@
 
 
                 </ul>
+                <ul class="right-menu-items">
+                    <li class="my-sidenav-link"><a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/question-and-answers-hub/q-a-detail/coronavirus-disease-covid-19#:~:text=symptoms">More information</a></li>
 
             </nav>
 
@@ -33,20 +35,15 @@
         </div>
   </div>
 
-    <section class="hero">
-        <div class="container">
+    <section>
+        <div>
         <br><h1 style ="text-align:center;">Vaccination &amp; Much more!   </h1> <br>
-          <br>  <h3 class="first-p">This is a non-profit site build for a project</h3><br>
+          <br>  <h2 class="first-p" style ="text-align:center;">This is a non-profit site build for a project. The goal of this project is to help an organization keep track of the different people, vaccines, facilities and their inventories. This site was created by Jason Hillinger, Sevag Kaspar, Siddhesh Mishra</h2><br>
 
 
         </div>
     </section>
     
-    <footer>
-        <ul class="sub-nav">
-            <li ><a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/question-and-answers-hub/q-a-detail/coronavirus-disease-covid-19#:~:text=symptoms">More information</a></li>
-
-        </ul>
-      </footer>
+    
 </body>
 </html>
