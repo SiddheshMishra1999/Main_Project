@@ -33,7 +33,7 @@ if($user){
     mysqli_query($db,$query);
     $query2 = "INSERT INTO Postal_code VALUES ('$postal_code','$city','$province')";
     mysqli_query($db,$query2);
-    $query = "INSERT INTO Reception VALUES (0,'$facility_id',1,'$date',0)";
+    $query = "INSERT INTO Reception VALUES (0,'$facility_id',1,null,0)";
     mysqli_query($db,$query2);
     // redirect to submitted page
     header("Location: Submitfacility.php");
