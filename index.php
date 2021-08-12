@@ -16,13 +16,14 @@
 
             <nav>
                 <ul >
-                    <li class="home" class="left-menu-items"><a href="Index.php">Home</a></li>
+                    <li class="left-menu-items" style="background-color: orange;"><a href="Index.php">Home</a></li>
                     <li class="left-menu-items"><a href="Person_display.php">Person</a></li>
                     <li class="left-menu-items"><a href="Vaccine.php">Vaccines</a></li>
                     <li class="left-menu-items"><a href="Received_display.php">Vaccinations</a></li>
-                    <li class="left-menu-items"><a href='queries.php'> Search Results </a> </li>
-                    <li  class="left-menu-items" ><a href="#">Facilities</a></li>
+                    <li  class="left-menu-items" ><a href="Facility.php">Facilities</a></li>
                     <li class="left-menu-items" ><a href="Workers.php">Health Safety Workers</a></li>
+                    <li class="left-menu-items"><a href='queries.php'> Search Results </a> </li>
+
 
                 </ul>
 
@@ -31,7 +32,7 @@
 
         </div>
   </div>
-v>
+
     <section class="hero">
         <div class="container">
         <br><h1 style ="text-align:center;">Vaccination &amp; Much more!   </h1> <br>

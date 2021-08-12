@@ -8,30 +8,25 @@
         <a class="logo" href="Index.php"><img class="logo" width = "60" height="60" src="Beechtown Pediatric Center.png"> </a>
 
             <nav>
-                <ul class="main-nav"> 
-                    <li><a href="Index.php">Home</a></li>
-                    <li class="person"><a href="Person_display.php">Person</a></li>
-                    <li><a href="Vaccine.php">Vaccines</a></li>
-                    <li><a href="Received_display.php">Vaccinations</a></li>
-                    <li><a href='queries.php'> Search Results </a> </li>
-
-                    <li><a href="Facility.php">Facilities</a></li>
-                    <li><a href="Workers.php">Health Safety Workers</a></li>
-                </ul>
-
-                <ul class="side-nav" >
-                    <li style="Float=Right"><a href="Person.php">Add a New Person </li>
-                    <li style="Float=Right"><a href="DeletePerson.php">Delete a Person </li>
-                    <li style="text-align: right"><a href="EditPerson.php">Edit a Person </li>
-
-
+                <ul >
+                    <li class="left-menu-items"><a href="Index.php">Home</a></li>
+                    <li class="left-menu-items"  style="background-color: orange;"><a href="Person_display.php">Person</a></li>
+                    <li class="left-menu-items"><a href="Vaccine.php">Vaccines</a></li>
+                    <li class="left-menu-items"><a href="Received_display.php">Vaccinations</a></li>
+                    <li class="left-menu-items" ><a href="Facility.php">Facilities</a></li>
+                    <li class="left-menu-items"><a href="Workers.php">Health Safety Workers</a></li>
+                    <li class="left-menu-items"><a href='queries.php'> Search Results </a> </li>
+                    <li class="left-menu-items"><a href="Person.php">Add a New Person</a></li>
+                    <li class="left-menu-items"><a href="DeletePerson.php">Delete a Person </a></li>
+                    <li class="left-menu-items"><a href="EditPerson.php">Edit a Person</a></li>
 
                 </ul>
-                
+
             </nav>
+
+
         </div>
   </div>
-
 
 
 <?php

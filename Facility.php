@@ -13,9 +13,10 @@
                     <li class="left-menu-items"><a href="Person_display.php">Person</a></li>
                     <li class="left-menu-items"><a href="Vaccine.php">Vaccines</a></li>
                     <li class="left-menu-items"><a href="Received_display.php">Vaccinations</a></li>
-                    <li><a href='queries.php'> Search Results </a> </li>
-                    <li class="home" class="left-menu-items" ><a href="#">Facilities</a></li>
+                    <li  style="background-color: orange;" class="left-menu-items" ><a href="#">Facilities</a></li>
                     <li class="left-menu-items" ><a href="Workers.php">Health Safety Workers</a></li>
+                    <li class="left-menu-items"><a href='queries.php'> Search Results </a> </li>
+
                     <li class="left-menu-items"><a href="FacilityPage.php">Add a New Facilitly </a></li>
                     <li class="left-menu-items"><a href="DeleteFacility.php">Delete a Facility</a> </li>
                     <li class="left-menu-items"><a href="EditFacility.php">Edit a Facility </a></li>
