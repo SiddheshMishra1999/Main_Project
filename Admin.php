@@ -27,7 +27,7 @@
         <hr>
 
         <label id="eligible_GroupID_label" for="eligible_GroupID">The Eligible Group Id: </label>
-      <input type="number" name="eligible_GroupID" id="eligible_GroupID" pattern="[1-10]{1} placeholder="From 1 to 10" required><br><br>
+      <input type="number" name="eligible_GroupID" id="eligible_GroupID" pattern="[1-10]{1}" placeholder="From 1 to 10" required><br><br>
 
       <label id="Province_label" for="Province">Province: </label>
       <select name="Province" id="Province" required>
