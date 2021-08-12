@@ -20,6 +20,10 @@ include_once 'server.php'
                 </nav>
             </div>
       </div>
+      <div class="row">
+    <div class="column">
+<table id="form_table">
+    <tr>
 
     <form action="Insert_Reception.php" method="post">
       <div class="form">
@@ -45,11 +49,10 @@ include_once 'server.php'
       <label id="vaccine_id" for="vaccine_id">What is the ID of the vaccine you received?: </label>
       <input type="text" name="vaccine_id" id="vaccine_id" pattern="[1-4]{1}" placeholder="From 1 to 4" required><br><br>
 
+</table>
+<table id="exists_table">
 
-      <div class="row">
-    <div class="column">
     <label id="exist_table_label" for="exist_table"> <h5>List of People and their dose_num, facilities, emplaoyee_id and vaccine id that exist in the database:<h5> </label>
-        <table id="exists_table">
         <thead>
             <th>Facility ID </th>
             <th>Facility Name </th>
