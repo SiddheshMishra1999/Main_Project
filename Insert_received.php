@@ -97,11 +97,11 @@ if($user){
     $query = "INSERT INTO Received VALUES ('$person_id', '$dose_num ', '$date_received', '$facility_id', '$employee_id','$vaccine_id')";
     mysqli_query($db,$query);
     //Sends to success page
-    header("Location: Sumbit.php");
+    header("Location: Successreceived.php");
   }
   else{
       //Sends to fail page because of one of the errors.
-      header("Location: Failed.php");
+      header("Location: Failedreceived.php");
   }
 
 ?>
