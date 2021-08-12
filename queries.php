@@ -146,6 +146,7 @@ $results12 = mysqli_query($db, $query_12);
     <div>
     <label id="Query12_label" for="table12"> <h4>Details of all the people who got vaccinated only one dose and are of group ages 1 to 3 <h4> </label>
     <table id = 'table12' class = 'table12' >
+    <thead>
 
 <th> First Name </th>
 <th> Last Name </th>
@@ -157,6 +158,7 @@ $results12 = mysqli_query($db, $query_12);
 <th> Administered Vaccine ID </th>
 <th> Infection History </th>
 <th> Number of Infections </th>
+</thead>
 </div>
 
 <?php
@@ -228,6 +230,7 @@ $results14 = mysqli_query($db, $query_14);
     <div>
     <label id="Queries14_label" for="table14"> <h4>Inventory of vaccine type Pfizer22342342:<h4> </label>
     <table id = 'table14' class = 'table14' >
+    <thead>
 
 <th> First Name </th>
 <th> Last Name </th>
@@ -236,6 +239,7 @@ $results14 = mysqli_query($db, $query_14);
 <th> Telephone </th>
 <th> City </th>
 <th> Person ID </th>
+</thead>
 </div>
 
 <?php
@@ -261,10 +265,12 @@ $results15 = mysqli_query($db, $query_15);
     <div>
     <label id="Query15_label" for="table15"> <h4>Report of the inventory of vaccines in each province. <h4> </label>
     <table id = 'table15' class = 'table15' >
+    <thead>
 
 <th> Province </th>
 <th> Amount of vaccines </th>
 <th> Vaccine Type </th>
+</thead>
 </div>
 
 <?php
