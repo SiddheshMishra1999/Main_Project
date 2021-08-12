@@ -22,10 +22,19 @@ $results = mysqli_query($db, $user_check_query);
 $user = mysqli_fetch_assoc($results);
 
 if($user){
-
   if($user['dose_num'] === $dose_num){array_push($errors, "Dose number already exist");}
-
 }
+
+$user_check_query = "SELECT * FROM Works_at, Facility WHERE end_date IS NULL AND Works_at.facility_id = '$facility_id'  LIMIT 1";
+
+$results = mysqli_query($db, $user_check_query);
+$user = mysqli_fetch_assoc($results);
+
+if($user){
+  array_push($errors, "Dose number already exist");
+}
+
+
   if(count($errors) == 0){
     $query = "INSERT INTO Received VALUES ('$person_id', '$dose_num ', '$date_received', '$facility_id', '$employee_id','$vaccine_id')";
     mysqli_query($db,$query);
