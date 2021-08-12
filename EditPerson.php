@@ -45,7 +45,7 @@ include_once 'server.php'
       <input type="text" name="address" id="address"><br><br>
 
       <label id="postal_code_label" for="postal_code">Postal Code: </label>
-      <input type="text" name="postal_code" id="postal_cose" pattern="[A-Z]{1}[0-9]{1}[A-Z]{1} [0-9]{1}[A-Z]{1}[0-9]{1}" placeholder="A1A 1A1"><br><br>
+      <input type="text" name="postal_code" id="postal_code" pattern="[A-Z]{1}[0-9]{1}[A-Z]{1} [0-9]{1}[A-Z]{1}[0-9]{1}" placeholder="A1A 1A1"><br><br>
 
       <label id="city_label" for="city">City: </label>
       <input type="text" name="city" id="city"><br><br>
@@ -89,28 +89,28 @@ include_once 'server.php'
           //hide the input by default
           document.getElementById("medicare").style.display= 'none';
           document.getElementById("SSN").style.display= 'none';
-          document.getElementById("medicare_label").style.display= 'none';     
-          document.getElementById("SSN_label").style.display= 'none'; 
+          document.getElementById("medicare_label").style.display= 'none';
+          document.getElementById("SSN_label").style.display= 'none';
 
 
           //show if canadian
           function checkIfCanadian(){
 
               if((document.getElementById("citizenship").value == "Canadian") || (document.getElementById("citizenship").value == "Permanent Resident")){
-                  document.getElementById("medicare_label").style.display= 'block';     
+                  document.getElementById("medicare_label").style.display= 'block';
                   document.getElementById("medicare").style.display= 'block';
-                  document.getElementById("SSN").style.display= 'block';   
-                  document.getElementById("SSN_label").style.display= 'block'; 
+                  document.getElementById("SSN").style.display= 'block';
+                  document.getElementById("SSN_label").style.display= 'block';
                   document.getElementById("SSN").required = false;
                   document.getElementById("medicare").required = false;
 
-             
+
                 }
                 else if ((document.getElementById("citizenship").value =="Visitor") || (document.getElementById("citizenship").value == "Temporary Resident")){
-                  document.getElementById("medicare_label").style.display= 'none';     
+                  document.getElementById("medicare_label").style.display= 'none';
                   document.getElementById("medicare").style.display= 'none';
-                  document.getElementById("SSN").style.display= 'none';   
-                  document.getElementById("SSN_label").style.display= 'none'; 
+                  document.getElementById("SSN").style.display= 'none';
+                  document.getElementById("SSN_label").style.display= 'none';
                   document.getElementById("SSN").required = false;
                   document.getElementById("medicare").required = false;
 
@@ -120,8 +120,8 @@ include_once 'server.php'
                 else{
                   document.getElementById("medicare").style.display= 'none';
                   document.getElementById("SSN").style.display= 'none';
-                  document.getElementById("medicare_label").style.display= 'none';     
-                  document.getElementById("SSN_label").style.display= 'none'; 
+                  document.getElementById("medicare_label").style.display= 'none';
+                  document.getElementById("SSN_label").style.display= 'none';
 
                 }
               }

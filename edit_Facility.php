@@ -13,7 +13,7 @@ $webaddress = mysqli_real_escape_string($db, $_POST['webaddress']);
 $telephone = mysqli_real_escape_string($db, $_POST['telephone']);
 $postal_code = mysqli_real_escape_string($db, $_POST['postal_code']);
 $province = mysqli_real_escape_string($db, $_POST['province']);
-$city = mysqli_real_escape_string($db, $_POST['province']);
+$city = mysqli_real_escape_string($db, $_POST['city']);
 
 //check for missing values
 

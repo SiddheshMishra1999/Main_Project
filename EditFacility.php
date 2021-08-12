@@ -42,7 +42,7 @@ include_once 'server.php'
       <input type="text" name="webaddress" id="webaddress"><br><br>
 
       <label id="postal_code_label" for="postal_code">Postal Code: </label>
-      <input type="text" name="postal_code" id="postal_cose" pattern="[A-Z]{1}[0-9]{1}[A-Z]{1} [0-9]{1}[A-Z]{1}[0-9]{1}" placeholder="A1A 1A1"><br><br>
+      <input type="text" name="postal_code" id="postal_code" pattern="[A-Z]{1}[0-9]{1}[A-Z]{1} [0-9]{1}[A-Z]{1}[0-9]{1}" placeholder="A1A 1A1"><br><br>
 
       <label id="province_label" for="province">Province: </label>
       <select name="province" id="province">
