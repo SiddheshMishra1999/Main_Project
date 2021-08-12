@@ -21,29 +21,50 @@ $city = mysqli_real_escape_string($db, $_POST['city']);
 //   $facility_id = "SELECT first_name FROM Facility WHERE facility_id = $facility_id";
 // }
 if(empty($type_name)) {
-  $type_name = "SELECT type_name FROM Facility WHERE facility_id = $facility_id";
+  $user_check_query = "SELECT type_name FROM Facility WHERE facility_id = $facility_id";
+  $results = mysqli_query($db, $user_check_query);
+  $user = mysqli_fetch_assoc($results);
+  $type_name = $user['type_name'];
 }
 if(empty($name)) {
-  $name = "SELECT name FROM Facility WHERE facility_id = $facility_id";
+  $user_check_query = "SELECT name FROM Facility WHERE facility_id = $facility_id";
+  $results = mysqli_query($db, $user_check_query);
+  $user = mysqli_fetch_assoc($results);
+  $name = $user['name'];
 }
 if(empty($webaddress)) {
-  $webaddress = "SELECT webaddress FROM Facility WHERE facility_id = $facility_id";
+  $user_check_query = "SELECT webaddress FROM Facility WHERE facility_id = $facility_id";
+  $results = mysqli_query($db, $user_check_query);
+  $user = mysqli_fetch_assoc($results);
+  $webaddress = $user['webaddress'];
 }
 if(empty($telephone)) {
-  $telephone = "SELECT telephone FROM Facility WHERE facility_id = $facility_id";
+  $user_check_query = "SELECT telephone FROM Facility WHERE facility_id = $facility_id";
+  $results = mysqli_query($db, $user_check_query);
+  $user = mysqli_fetch_assoc($results);
+  $telephone = $user['telephone'];
 }
 if(empty($postal_code)) {
-  $postal_code = "SELECT postal_code FROM Facility WHERE facility_id = $facility_id";
+  $user_check_query = "SELECT postal_code FROM Facility WHERE facility_id = $facility_id";
+  $results = mysqli_query($db, $user_check_query);
+  $user = mysqli_fetch_assoc($results);
+  $postal_code = $user['postal_code'];
 }
 
 if(empty($city)) {
-  $city = "SELECT city FROM Facility WHERE facility_id = $facility_id";
+  $city = "SELECT city FROM Postal_code WHERE Postal_code = $postal_code";
 }
 if(empty($address)) {
-  $address = "SELECT address FROM Facility WHERE facility_id = $facility_id";
+  $user_check_query = "SELECT address FROM Facility WHERE facility_id = $facility_id";
+  $results = mysqli_query($db, $user_check_query);
+  $user = mysqli_fetch_assoc($results);
+  $address = $user['address'];
 }
 if(empty($province)) {
-  $province = "SELECT province FROM Facility WHERE facility_id = $facility_id";
+  $user_check_query = "SELECT province FROM Facility WHERE facility_id = $facility_id";
+  $results = mysqli_query($db, $user_check_query);
+  $user = mysqli_fetch_assoc($results);
+  $province = $user['province'];
 }
 
 
@@ -66,7 +87,6 @@ $query8 = "UPDATE Facility SET address= '$address' WHERE facility_id = '$facilit
 mysqli_query($db,$query8);
 $query12 = "UPDATE Postal_code SET province= '$province' WHERE postal_code = '$postal_code'";
 mysqli_query($db,$query12);
-
 
 
   // redirect to submitted page
